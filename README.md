@@ -13,7 +13,7 @@ To install this project on your local machine, please follow these steps:
 1. Clone this repository to your computer : ```$git clone https://github.com/Alex-mant/P12_Mantione_Alexandre```.
 2. In terminal, make sure you are on the right directory ```$cd P12_Mantione_Alexandre```.
 3. Install all dependencies of this project, please enter this following command : ```$npm install```
-4. Now you can run script npm : ```$react-scripts start``` to launch live server and you can navigate on the app. 
+4. Now you can run script: ```$react-scripts start``` to launch live server and you can navigate on the app. 
     > You should be redirect to http://localhost:3000 if not copy/paste it in url web browser or make sure terminal not return an error.
 
 #### 2. Bug Tracker :
