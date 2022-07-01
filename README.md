@@ -18,4 +18,4 @@ To install this project on your local machine, please follow these steps:
     > You should be redirect to http://localhost:3000 if not copy/paste it in url web browser or make sure terminal not return an error.
 
 #### 2. Bug Tracker :
-Find bug in app or error in this guide, you can report them to : bug-report_sportSee@gmail.com
+Find bug in app ? Error in this guide ? You can report them to : bug-report_sportSee@gmail.com
