@@ -5,7 +5,6 @@
 
 #### Prerequisite :
 - node-js
-- 
 
 #### 1. Install SportSee project app on your computer :
 
