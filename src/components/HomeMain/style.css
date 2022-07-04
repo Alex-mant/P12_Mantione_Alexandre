@@ -1,4 +1,5 @@
 .HomeMain{
+  grid-area: "Main";
   padding: 50px 107px;
 }
 

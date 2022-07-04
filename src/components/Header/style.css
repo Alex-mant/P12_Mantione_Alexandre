@@ -6,8 +6,16 @@
 }
 
 .header_logo{
+  display: flex;
+  align-items: center;
   padding: 15px 20px;
   height: 107px;
+}
+
+.header_logo h1{
+  margin-left: 10px;
+  font-size: 24px;
+  color: red;
 }
 
 .header_navbar{
@@ -20,6 +28,7 @@
 .header_navlink{
   margin-right: 204px;
   font-family: 'Roboto', sans-serif;
+  font-size: 24px;
   font-weight: 500;
   color: #FFF;
   text-decoration: none;

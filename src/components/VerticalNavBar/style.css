@@ -1,4 +1,5 @@
 .verticalNavBar{
+  grid-area: "verticalBar";
   display: flex;
   flex-direction: column;
   justify-content: center;

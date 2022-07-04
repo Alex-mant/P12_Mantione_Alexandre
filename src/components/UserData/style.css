@@ -8,13 +8,20 @@
 }
 
 .rechart1{
-  background-color: grey;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FBFBFB;
+  border-radius: 10px;
   width: 835px;
   height: 320px;
   margin-bottom: 20px;
 }
 .rechart2{
-  background-color: grey;
+  display: flex;
+  justify-content: space-between;
   width: 835px;
   height: 263px;
 }
@@ -37,4 +44,72 @@
   border-radius: 10px;
   width: 258px;
   height: 124px;
+}
+
+.little-chart{
+  width: 31%;
+  height: 100%;
+}
+
+.average-duration{
+  background-color: #FF0000;
+  border-radius: 10px;
+}
+
+.intensity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #282D30;  
+  border-radius: 10px;
+}
+
+.score{
+  position: relative;
+  background-color: #FBFBFB;  
+  border-radius: 10px;
+}
+
+.chart1_legend{
+  position: absolute;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  top: 20px;
+  right: 35px;
+}
+.chart1_title{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.barLegend{
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+}
+.fill1{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #282D30;
+  border: 1px solid #282D30;
+  border-radius: 50%;
+}
+
+.fill2{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #E60000;
+  border: 1px solid #E60000;
+  border-radius: 50%;
+}
+
+.chart_dayActivity{
+  position: absolute;
+  left: -35px;
+  bottom: -30px;
 }
