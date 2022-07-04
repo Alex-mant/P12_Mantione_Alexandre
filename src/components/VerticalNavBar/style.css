@@ -1,0 +1,14 @@
+.verticalNavBar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background-color: black;
+  min-height: calc(100vh - (var(--headerHeight)));
+  width: 120px;
+}
+
+.vertical-filter{
+  margin-left: calc(calc(120px - 64px)/2);
+  margin-bottom: 20px;
+}
