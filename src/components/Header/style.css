@@ -1,9 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
 .Header{
   width: 100vw;
   display: flex;
@@ -12,18 +6,19 @@ body {
 }
 
 .header_logo{
-  padding: 19px 30px;
+  padding: 15px 20px;
+  height: 107px;
 }
 
 .header_navbar{
   width: 100vw;
   padding: 0 120px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .header_navlink{
+  margin-right: 204px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: #FFF;

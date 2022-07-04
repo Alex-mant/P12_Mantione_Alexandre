@@ -1,6 +1,13 @@
-/* Css reset */
+/*Import*/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Variables */
 :root{
   --headerHeight : 103px;
+/* Css reset */
 }
 html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6 {
   margin: 0;
@@ -47,5 +54,5 @@ code {
 .HomeDisplay{
   display: grid;
   grid-template-areas: "verticalBar Main";
-  grid-column: 117px auto 87px;
+  grid-template-columns: 117px auto 87px;
 }

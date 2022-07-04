@@ -11,4 +11,5 @@
 .vertical-filter{
   margin-left: calc(calc(120px - 64px)/2);
   margin-bottom: 20px;
+  cursor: pointer;
 }

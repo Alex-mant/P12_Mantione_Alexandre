@@ -11,7 +11,8 @@ const App = () => {
       <ScrollToTop>
         <DataContextProvider>
           <Routes>
-            <Route exact path='/sportSee/home' element= {<Home />}/>  
+            <Route exact path='/sportSee/home' element= {<Home />}/>
+            <Route path ="*"/>
           </Routes>
         </DataContextProvider> 
       </ScrollToTop>
