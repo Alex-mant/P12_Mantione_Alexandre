@@ -55,4 +55,4 @@ code {
   display: grid;
   grid-template-areas: "verticalBar Main";
   grid-template-columns: 117px auto 87px;
-}
+} 

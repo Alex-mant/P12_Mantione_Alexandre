@@ -19,12 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "doc": "jsdoc -c jsdoc.json"
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "clean-jsdoc-theme": "^4.1.2",
     "gh-pages": "^4.0.0",
     "jsdoc": "^3.6.10",
     "node-sass": "^7.0.1",

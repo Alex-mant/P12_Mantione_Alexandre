@@ -1,31 +1,34 @@
 import React, { PureComponent } from 'react';
-import { PieChart,Pie,Cell } from 'recharts';
+import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'Group A', value: 20 },
-  { name: 'Group B', value: 29 }
+  {
+    name: '18-24',
+    uv: 6.64,
+    pv: 4800,
+    fill: '#8884d8',
+  }
 ];
-const COLORS = ['#FF0101', '#fff'];
 
-export default class PieChartPaddingAngle extends PureComponent {
+/**
+ *This class is a React component that renders a RadialBarChart using the data of user from SportSee's API. 
+ */
+class RadialChart extends PureComponent {
   render() {
     return (
-      <PieChart className='scorePieChart' width={800} height={400} onMouseEnter={this.onPieEnter}>
-        <Pie
-          data={data}
-          cx={120}
-          cy={120}
-          innerRadius={60}
-          outerRadius={80}
-          fill="#fff"
-          paddingAngle={5}
-          dataKey="value"
-        >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
-      </PieChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <RadialBarChart cx="50%" cy="50%" innerRadius="60%" outerRadius="70%" barSize={10} data={data}>
+          <RadialBar
+            minAngle={15}
+            label={{ position: 'insideStart', fill: '#fff' }}
+            background
+            clockWise
+            dataKey="uv"
+          />
+        </RadialBarChart>
+      </ResponsiveContainer>
     );
   }
 }
+
+export default RadialChart;
