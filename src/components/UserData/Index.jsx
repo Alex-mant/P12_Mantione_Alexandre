@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import CaloriesIcon from "../../assets/Calories-icon";
 import GlucidesIcon from "../../assets/Glucides-icon";
 import LipidesIcon from "../../assets/Lipides-icon";
