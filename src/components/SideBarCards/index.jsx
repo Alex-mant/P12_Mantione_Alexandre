@@ -11,8 +11,8 @@ const SideBarCard = ({icon, data, unit, text}) => {
     <div className="sideBarData_Info">
       {icon}
       <div className="info">
-        <p>{data}{unit}</p>
-        <p>{text}</p>
+        <p className="sideBarData_textData">{data}{unit}</p>
+        <p className="sideBarData_textData2">{text}</p>
       </div>          
     </div>
   );

@@ -1,1 +1,12 @@
 /* A RECUPERER DE USERDATA CSS*/
+
+.sideBarData_textData{
+  color: #282D30;
+  font-weight: 700;
+  font-size: 20px;
+}
+.sideBarData_textData2{
+  font-weight: 500;
+  font-size: 14px;
+  color: #74798C;
+}
