@@ -8,3 +8,11 @@ text{
   font-weight: 500;
   fill:#000
 }
+.radialBarChart_title{
+  font-weight: 500;
+  font-size: 15px;
+  padding: 30px;
+}
+.radialBarChart{
+  margin-top: -65px;
+}
