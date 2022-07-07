@@ -41,10 +41,7 @@ const data = [
   },
 ];
 
-
 export default class SimpleRadarChart extends PureComponent {
-
-  
 
   render() {
     return (
