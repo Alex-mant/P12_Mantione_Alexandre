@@ -1,0 +1,37 @@
+.barchart tspan{
+  fill: #9B9EAC;
+  font-size: 14px;
+}
+.chart-titleXchart-legend{
+  font-weight: 500;
+  width: 750px;
+  display: flex;
+  margin-bottom: 60px;
+}
+.chart-title{
+  margin-left: 15px;
+  margin-right: 310px;
+  font-style: 15px;
+  font-weight: 500;
+}
+.chart-legend{
+  display: flex;
+  font-size: 14px; ;
+}
+.legend-textXdot{
+  display: flex;
+  align-items: center;
+}
+.dot{
+  margin: auto 5px auto 15px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.red{
+  background-color: red;
+}
+.black{
+  background-color: black;  
+}

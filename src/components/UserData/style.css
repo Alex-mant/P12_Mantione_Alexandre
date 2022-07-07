@@ -20,6 +20,7 @@
   margin-bottom: 20px;
 }
 .rechart2{
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 835px;

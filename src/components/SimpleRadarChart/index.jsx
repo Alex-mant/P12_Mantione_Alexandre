@@ -46,7 +46,7 @@ export default class SimpleRadarChart extends PureComponent {
   render() {
     return (
       <ResponsiveContainer className="intensity-chart" width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+        <RadarChart className='radarChart' cx="50%" cy="50%" outerRadius="80%" data={data}>
           <Layer color='#fff'/>
           <Tooltip/>
           <PolarGrid />

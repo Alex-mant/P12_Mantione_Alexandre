@@ -2,7 +2,7 @@
   color: #fff;
 }
 
-tspan{
+.radarChart tspan{
   font-size: 10px;
   fill: #fff
 }

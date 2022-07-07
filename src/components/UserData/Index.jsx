@@ -2,7 +2,8 @@ import CaloriesIcon from "../../assets/Calories-icon";
 import GlucidesIcon from "../../assets/Glucides-icon";
 import LipidesIcon from "../../assets/Lipides-icon";
 import ProteinesIcon from "../../assets/Proteines-icon";
-import RadialChart from "../PieChart";
+import TinyLineChart from "../LineChart";
+import SimpleBarChart from "../SimpleBarChart";
 import SimpleRadarChart from "../SimpleRadarChart/index";
 import "./style.css"
 
@@ -20,14 +21,13 @@ const UserData = ({data}) => {
   return(
     <div className="UserData">
       <div className="horizontalCharts">
-        <div className="rechart1">          
-        </div>
+        <div className="rechart1"><SimpleBarChart/></div>
         <div className="rechart2">
-          <div className="average-duration little-chart"></div>
+          <div className="average-duration little-chart"><TinyLineChart/></div>
           <div className="intensity little-chart"><SimpleRadarChart/></div>
-          <div className="score little-chart"><RadialChart></RadialChart></div>
+          <div className="score little-chart"></div>
         </div>
-      </div>
+      </div>      
       <div className="sideBarData">
         <div className="sideBarData_Info">
           <CaloriesIcon/>

@@ -1,0 +1,13 @@
+.lineChart{
+  margin-top: 20px;
+}
+.linechart_title{
+  padding: 29px 34px;
+  width: 220px;
+  color: #FFFFFF;
+}
+.lineChart tspan{
+  fill:#FFF;
+  font-size: 12px;
+
+}
