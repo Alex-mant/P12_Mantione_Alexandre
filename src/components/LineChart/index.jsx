@@ -6,58 +6,73 @@ const data = [
   {
     name: 'L',
     uv: 4000,
-    pv: 2400,
+    pv: 24,
     amt: 2400,
   },
   {
     name: 'M',
     uv: 3000,
-    pv: 1398,
+    pv: 13,
     amt: 2210,
   },
   {
     name: 'M',
     uv: 2000,
-    pv: 9800,
+    pv: 98,
     amt: 2290,
   },
   {
     name: 'J',
     uv: 2780,
-    pv: 3908,
+    pv: 39,
     amt: 2000,
   },
   {
     name: 'V',
     uv: 1890,
-    pv: 4800,
+    pv: 48,
     amt: 2181,
   },
   {
     name: 'S',
     uv: 2390,
-    pv: 3800,
+    pv: 38,
     amt: 2500,
   },
   {
     name: 'D',
     uv: 3490,
-    pv: 4300,
+    pv: 43,
     amt: 2100,
   },
 ];
 
-export default class TinyLineChart extends PureComponent {
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    payload[0].chartType = "AreaChart";
+    return (
+      <div className="custom-tooltip">
+        <p className="user-number">
+          {payload[0].payload.number}
+        </p>
+        <p className="label">{payload[0].value + " min"}</p>
+      </div>
+    );
+  }
 
+  return null;
+};
+
+export default class TinyLineChart extends PureComponent {
   render() {
     return (
       <>
       <h3 className='linechart_title'>Durée moyenne des sessions</h3>
       <ResponsiveContainer  width={258} height={126}>
-        <LineChart className={"lineChart"} width={300} height={100} data={data}>
-          <Line dot={false} activeDot={{ r: 4 }} type="natural" dataKey="pv" stroke="white" strokeWidth={2} />
-          <XAxis padding={{left:15,right:15}} stroke="" tickSize={20} tickLine={false} interval={0} dataKey={"name"}/>
-          <Tooltip cursor={false} payload={[{value:"pv"}]} />
+        <LineChart name="linechart" className={"lineChart"} width={300} height={100} data={data}>
+          <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={20} tickLine={false} interval={0} dataKey="name"/>
+          <Line dot={false} activeDot={{ r: 4 }} type="natural" dataKey={"pv"} stroke="white" strokeWidth={2} />
+          <Tooltip  content={<CustomTooltip />} cursor={false} filterNull={false} />
         </LineChart>
       </ResponsiveContainer>
       </>

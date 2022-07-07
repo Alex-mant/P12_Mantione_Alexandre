@@ -1,12 +1,13 @@
+import { useEffect } from "react";
 import CaloriesIcon from "../../assets/Calories-icon";
 import GlucidesIcon from "../../assets/Glucides-icon";
 import LipidesIcon from "../../assets/Lipides-icon";
 import ProteinesIcon from "../../assets/Proteines-icon";
 import TinyLineChart from "../LineChart";
+import NormalPieChart from "../RadialChart";
 import SimpleBarChart from "../SimpleBarChart";
 import SimpleRadarChart from "../SimpleRadarChart/index";
 import "./style.css"
-
 
 /**
  * It returns a div with two children divs, one with two children divs, and the other with four
@@ -25,7 +26,7 @@ const UserData = ({data}) => {
         <div className="rechart2">
           <div className="average-duration little-chart"><TinyLineChart/></div>
           <div className="intensity little-chart"><SimpleRadarChart/></div>
-          <div className="score little-chart"></div>
+          <div className="score little-chart"><NormalPieChart/></div>
         </div>
       </div>      
       <div className="sideBarData">
