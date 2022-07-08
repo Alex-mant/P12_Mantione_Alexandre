@@ -7,10 +7,13 @@ import "./style.css"
 const VerticalNavBar = () => {
   return(
     <div className="verticalNavBar">
-      <Btn1/>
-      <Btn2/>
-      <Btn3/>
-      <Btn4/>
+      <div className="verticalNavBar_btn-container">
+        <Btn1/>
+        <Btn2/>
+        <Btn3/>
+        <Btn4/>
+      </div>
+      <div className="copyright">Copyright, SportSee 2020</div>
     </div>
   )
 }
