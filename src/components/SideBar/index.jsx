@@ -1,20 +1,24 @@
 import React from 'react';
-import CaloriesIcon from '../../assets/Calories-icon';
-import GlucidesIcon from '../../assets/Glucides-icon';
-import LipidesIcon from '../../assets/Lipides-icon';
-import ProteinesIcon from '../../assets/Proteines-icon';
+import CaloriesIcon from '../../assets/Calories-icon.svg';
+import GlucidesIcon from '../../assets/Glucides-icon.svg';
+import LipidesIcon from '../../assets/Lipides-icon.svg';
+import ProteinesIcon from '../../assets/Proteines-icon.svg';
 import SideBarCard from '../SideBarCards';
 import "./styles.css"
 
-/* A function that returns a div with 4 SideBarCard components. */
+
+/**
+ * It returns a div with four SideBarCard components inside.
+ * @returns A React component.
+ */
 const SideBar = () => {
   return (
     <div className="sideBarData">
-        <SideBarCard icon={<CaloriesIcon/>} data={"1,930"} unit={'kCal'} text={"Calories"}/>
-        <SideBarCard icon={<ProteinesIcon/>} data={232} unit={'g'} text={"Proteines"}/>    
-        <SideBarCard icon={<GlucidesIcon/>} data={123} unit={'g'} text={"Glucides"}/>    
-        <SideBarCard icon={<LipidesIcon/>} data={423} unit={'g'} text={"Lipides"}/>    
-      </div>
+      <SideBarCard icon={CaloriesIcon} count={'1,234'} unit={'kCal'} text={"Calories"}/>
+      <SideBarCard icon={ProteinesIcon} count={'234'} unit={'g'} text={"Proteines"}/>    
+      <SideBarCard icon={GlucidesIcon} count={'343'} unit={'g'} text={"Glucides"}/>    
+      <SideBarCard icon={LipidesIcon} count={'434'} unit={'g'} text={"Lipides"}/>    
+    </div>
   );
 }
 

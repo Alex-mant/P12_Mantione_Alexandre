@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/Logo";
+import logo from "../../assets/Logo.svg"
 import "./style.css";
 
 /**
@@ -12,7 +12,7 @@ const Header = () => {
 return(
   <div className="Header">
     <div className="header_logo">
-      <Logo/>
+      <img src={logo} alt="logo sportsee" />
       <h1>SportSee</h1>
     </div>
     <nav className="header_navbar">

@@ -17,8 +17,6 @@ const DataContextProvider = (props) => {
   useEffect(() => {
     axios.get("https://calm-gorge-80201.herokuapp.com/user/12").then((res) => setData(res.data))
   }, [])
-
-  console.log(data);
   
   return(
     <DataContext.Provider value={{data}} >

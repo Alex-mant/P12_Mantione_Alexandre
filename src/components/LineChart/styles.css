@@ -24,3 +24,7 @@
   color: #000;
   font-size: 12px;
 }
+.horizontalCharts .rechart2 .average-duration div.recharts-responsive-container{
+  width: auto;
+  height: auto;
+}

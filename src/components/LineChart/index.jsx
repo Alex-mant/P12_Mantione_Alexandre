@@ -68,7 +68,7 @@ export default class TinyLineChart extends PureComponent {
     return (
       <>
       <h3 className='linechart_title'>Durée moyenne des sessions</h3>
-      <ResponsiveContainer  width={258} height={126}>
+      <ResponsiveContainer  width={"100%"} height={126}>
         <LineChart name="linechart" className={"lineChart"} width={300} height={100} data={data}>
           <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={20} tickLine={false} interval={0} dataKey="name"/>
           <Line dot={false} activeDot={{ r: 4 }} type="natural" dataKey={"pv"} stroke="white" strokeWidth={2} />

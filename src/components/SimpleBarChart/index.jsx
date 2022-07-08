@@ -1,6 +1,6 @@
 import "./styles.css";
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [
     {
@@ -77,31 +77,33 @@ const SimpleBarChart = () => {
                     </div>
                 </div>
             </div>
-            <BarChart
-                className="barchart"
-                width={746.5}
-                height={196}
-                data={data}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }}
-            >
-                <CartesianGrid horizontal={true} vertical={false} strokeDasharray="3" />
-                <XAxis
-                    dataKey="name"
-                    tickSize={15}
-                    tickLine={false}
-                    scale={"point"}
-                    padding={{ left: 9.5, right: 8.5 }}
-                />
-                <YAxis tickSize={45} orientation="right" domain={[69, 71]} tickCount={3} stroke={""} />
-                <Tooltip content={<CustomTooltip />} />
-                <Bar barSize={7} dataKey="pv" fill="black" radius={[3, 3, 0, 0]} />
-                <Bar barSize={7} dataKey="uv" fill="red" radius={[3, 3, 0, 0]} />
-            </BarChart>
+            <ResponsiveContainer  width="100%" aspect={3}>
+                <BarChart
+                    className="barchart"
+                    width={746.5}
+                    height={196}
+                    data={data}
+                    margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                    }}
+                >
+                    <CartesianGrid horizontal={true} vertical={false} strokeDasharray="3" />
+                    <XAxis
+                        dataKey="name"
+                        tickSize={15}
+                        tickLine={false}
+                        scale={"point"}
+                        padding={{ left: 9.5, right: 8.5 }}
+                    />
+                    <YAxis tickSize={45} orientation="right" domain={[69, 71]} tickCount={3} stroke={""} />
+                    <Tooltip content={<CustomTooltip />} />
+                    <Bar barSize={7} dataKey="pv" fill="black" radius={[3, 3, 0, 0]} />
+                    <Bar barSize={7} dataKey="uv" fill="red" radius={[3, 3, 0, 0]} />
+                </BarChart>
+            </ResponsiveContainer>
         </>
     );
 };

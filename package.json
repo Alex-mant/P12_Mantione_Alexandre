@@ -1,8 +1,8 @@
 {
   "name": "newproject",
   "version": "0.1.0",
+  "proxy": "http://localhost:3000",
   "private": true,
-  "proxy": "https://baseUrlOfApi.com/",
   "homepage": "http://localhost:3000/sportSee/home",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
