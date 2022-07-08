@@ -1,4 +1,4 @@
-import Charts from "../Charts";
+import DisplayCharts from "../DisplayCharts";
 import SideBar from "../SideBar";
 import "./style.css"
 
@@ -7,13 +7,13 @@ import "./style.css"
  * UserData is a function that returns a div with two child components, Charts and SideBar.
  * @returns The UserData component is being returned.
  */
-const UserData = () => {
+const HomeMainContent = () => {
   return(
     <div className="UserData">
-      <Charts/> 
+      <DisplayCharts/> 
       <SideBar/>
     </div>
   )
 }
 
-export default UserData;
+export default HomeMainContent;

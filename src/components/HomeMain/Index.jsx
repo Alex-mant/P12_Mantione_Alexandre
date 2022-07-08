@@ -1,14 +1,14 @@
-import UserData from "../UserData/Index";
+import HomeMainContent from "../HomeMainContent/Index";
 import "./style.css"
 
-const Main = () => {
+const HomeMain = ({userName}) => {
   return(
     <div className="HomeMain">
-      <h1 className="title">Bonjour <span className="title_userName">Thomas</span></h1>
+      <h1 className="title">Bonjour <span className="title_userName">{userName}</span></h1>
       <p className="motivational-text">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-      <UserData/>
+      <HomeMainContent/>
     </div>
   )
 }
 
-export default Main;
+export default HomeMain;

@@ -11,7 +11,7 @@ import "./styles.css"
  * component.
  * @returns A div with className "horizontalCharts" and three divs inside it.
  */
-const Charts = () => {
+const DisplayCharts = () => {
   return (
       <div className="horizontalCharts">
         <div className="rechart1"><SimpleBarChart/></div>
@@ -24,4 +24,4 @@ const Charts = () => {
   );
 }
 
-export default Charts;
+export default DisplayCharts;
