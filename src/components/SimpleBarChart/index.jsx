@@ -86,22 +86,21 @@ const SimpleBarChart = () => {
                     margin={{
                         top: 5,
                         right: 30,
-                        left: 20,
+                        left: 50,
                         bottom: 5,
                     }}
                 >
-                    <CartesianGrid horizontal={true} vertical={false} strokeDasharray="3" />
+                    <CartesianGrid horizontal={true} vertical={false} strokeDasharray="3 3" />
                     <XAxis
                         dataKey="name"
                         tickSize={15}
                         tickLine={false}
-                        scale={"point"}
-                        padding={{ left: 9.5, right: 8.5 }}
+                        padding={{ left: -40, right: -41.95 }}
                     />
                     <YAxis tickSize={45} orientation="right" domain={[69, 71]} tickCount={3} stroke={""} />
-                    <Tooltip content={<CustomTooltip />} />
+                    <Tooltip  content={CustomTooltip} />
                     <Bar barSize={7} dataKey="pv" fill="black" radius={[3, 3, 0, 0]} />
-                    <Bar className="test" barSize={7} dataKey="uv" fill="red" radius={[3, 3, 0, 0]}/>
+                    <Bar barSize={7} dataKey="uv" fill="red" radius={[3, 3, 0, 0]}/>
                 </BarChart>
             </ResponsiveContainer>
         </>
