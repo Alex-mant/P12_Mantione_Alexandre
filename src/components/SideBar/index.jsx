@@ -3,6 +3,7 @@ import CaloriesIcon from '../../assets/Calories-icon.svg';
 import GlucidesIcon from '../../assets/Glucides-icon.svg';
 import LipidesIcon from '../../assets/Lipides-icon.svg';
 import ProteinesIcon from '../../assets/Proteines-icon.svg';
+// import { DataContext } from '../../context/DataContext';
 import SideBarCard from '../SideBarCards';
 import "./styles.css"
 
@@ -12,12 +13,22 @@ import "./styles.css"
  * @returns A React component.
  */
 const SideBar = () => {
+  // const {data} = useContext(DataContext);
+  // const calorieCount = data.data.keyData.calorieCount;
+  const calorieCount = 2346;
+  // const ProteinsCount = data.data.keyData.proteinCount;
+  const ProteinsCount = 876;
+  // const GlucidesCount = data.data.keyData.carbohydrateCount;
+  const GlucidesCount = 342;
+  // const LipidesCount = data.data.keyData.lipidCount;
+  const LipidesCount = 123;
+
   return (
     <div className="sideBarData">
-      <SideBarCard icon={CaloriesIcon} count={'1,234'} unit={'kCal'} text={"Calories"}/>
-      <SideBarCard icon={ProteinesIcon} count={'234'} unit={'g'} text={"Proteines"}/>    
-      <SideBarCard icon={GlucidesIcon} count={'343'} unit={'g'} text={"Glucides"}/>    
-      <SideBarCard icon={LipidesIcon} count={'434'} unit={'g'} text={"Lipides"}/>    
+      <SideBarCard pathIcon={CaloriesIcon} iCount={calorieCount} strUnit={'kCal'} strNameOfCount={"Calories"}/>
+      <SideBarCard pathIcon={ProteinesIcon} iCount={ProteinsCount} strUnit={'g'} strNameOfCount={"Proteines"}/>    
+      <SideBarCard pathIcon={GlucidesIcon} iCount={GlucidesCount} strUnit={'g'} strNameOfCount={"Glucides"}/>    
+      <SideBarCard pathIcon={LipidesIcon} iCount={LipidesCount} strUnit={'g'} strNameOfCount={"Lipides"}/>    
     </div>
   );
 }

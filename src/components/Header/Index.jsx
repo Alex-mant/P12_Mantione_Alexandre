@@ -9,6 +9,7 @@ import "./style.css";
  * @returns A React component
  */
 const Header = () => {
+
 return(
   <div className="Header">
     <div className="header_logo">

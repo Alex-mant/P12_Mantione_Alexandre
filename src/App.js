@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 import Header from './components/Header/Index';
 import Home from './pages/Home';
-import DataContextProvider from './context/DataContext';
+import {DataContextProvider} from './context/DataContext';
 
 /**
  * The App function returns a Router component that contains a Header component, a ScrollToTop

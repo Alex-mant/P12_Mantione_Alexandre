@@ -101,7 +101,7 @@ const SimpleBarChart = () => {
                     <YAxis tickSize={45} orientation="right" domain={[69, 71]} tickCount={3} stroke={""} />
                     <Tooltip content={<CustomTooltip />} />
                     <Bar barSize={7} dataKey="pv" fill="black" radius={[3, 3, 0, 0]} />
-                    <Bar barSize={7} dataKey="uv" fill="red" radius={[3, 3, 0, 0]} />
+                    <Bar className="test" barSize={7} dataKey="uv" fill="red" radius={[3, 3, 0, 0]}/>
                 </BarChart>
             </ResponsiveContainer>
         </>

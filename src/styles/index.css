@@ -52,7 +52,16 @@ code {
 /* Home Page*/
 
 .HomeDisplay{
-  display: grid;
-  grid-template-areas: "verticalBar Main";
-  grid-template-columns: 117px auto 87px;
+  display: flex;
+  max-height: calc(780px - 107px);
+  height: 100%;
 } 
+
+.root{
+  min-width: 1024px;
+  min-height: 780px;
+  max-width: 1920px;
+  width: 100%;
+  max-height: 1080px;
+  height: 100%;
+}

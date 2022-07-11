@@ -1,6 +1,4 @@
 .verticalNavBar{
-  grid-area: "verticalBar";
-  /* max-height: calc(100vh - (var(--headerHeight))); */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -8,13 +6,16 @@
   color: #fff;
   background-color: #000;
   width: 120px;
+  min-height: calc(780px - 107px);
+  height: 100vw;
+  max-height: calc(1080px - 107px);
 }
 .verticalNavBar_btn-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 150px auto;
+  margin: 125px auto;
 }
 
 .vertical-filter{

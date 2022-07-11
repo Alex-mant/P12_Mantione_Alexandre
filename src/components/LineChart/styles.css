@@ -1,5 +1,6 @@
 .lineChart{
   margin-top: 20px;
+  height: 121px;
 }
 .linechart_title{
   padding: 29px 34px;
@@ -27,4 +28,7 @@
 .horizontalCharts .rechart2 .average-duration div.recharts-responsive-container{
   width: auto;
   height: auto;
+}
+.responsiveContainer{
+  max-height: 263px;
 }

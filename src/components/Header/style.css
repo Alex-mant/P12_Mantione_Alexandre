@@ -1,8 +1,9 @@
 .Header{
-  width: 100vw;
   display: flex;
   background-color: #000;
   color: #FFF;
+  margin: 0;
+  width: 100vw;
 }
 
 .header_logo{
@@ -19,10 +20,11 @@
 }
 
 .header_navbar{
-  width: 100vw;
-  padding: 0 120px;
+  margin: 0 120px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: #000;
 }
 
 .header_navlink{

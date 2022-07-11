@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { createContext } from 'react';
 import { useState } from 'react';
 
-export const DataContext = createContext();
+const DataContext = createContext();
 
 /**
  * The DataContextProvider function is a React component that uses the useState hook to set the initial
@@ -14,10 +14,14 @@ export const DataContext = createContext();
 const DataContextProvider = (props) => {
   const [data, setData] = useState([]);
 
+
   useEffect(() => {
-    axios.get("https://calm-gorge-80201.herokuapp.com/user/12").then((res) => setData(res.data))
-  }, [])
-  
+    axios.get("https://calm-gorge-80201.herokuapp.com/user/12").then((res) =>{
+      setData(res.data.data);
+    } 
+  )}, [])
+
+   
   return(
     <DataContext.Provider value={{data}} >
       {props.children}
@@ -25,5 +29,5 @@ const DataContextProvider = (props) => {
   )
 }
 
-export default DataContextProvider;
+export {DataContext, DataContextProvider}
 
