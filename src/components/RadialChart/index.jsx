@@ -1,13 +1,17 @@
 import "./styles.css";
-import React from "react";
+import React, { useContext } from "react";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import "./styles.css"
+import { DataContext } from "../../context/DataContext";
 
-const data = [{ name: "L1", value: 50 }];
 
 const circleSize = 250;
 
 export default function App() {
+
+  let {data} = useContext(DataContext);
+  data.score > 100 ? data.score = data.score/10 :data.score = data.score*10
+  
   return (
     <>
       <h3 className="radialBarChart_title">Score</h3>
@@ -20,7 +24,7 @@ export default function App() {
         innerRadius={70}
         outerRadius={80}
         barSize={9}
-        data={data}
+        data={[data]}
         startAngle={-270}
         endAngle={90}
       >
@@ -32,7 +36,7 @@ export default function App() {
         />
         <RadialBar
           background
-          dataKey="value"
+          dataKey="score"
           cornerRadius={circleSize / 2}
           fill="red"
         />
@@ -43,7 +47,7 @@ export default function App() {
           dominantBaseline="middle"
           className="progress-label"
         >
-          {data[0].value}%
+          {data.score}%
         </text>
         <text 
         x={circleSize / 2} 
