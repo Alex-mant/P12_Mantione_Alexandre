@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import ScrollToTop from './utils/ScrollToTop';
 import Header from './components/Header/Index';
 import Home from './pages/Home';
 import {DataContextProvider} from './context/DataContext';
+
 
 /**
  * The App function returns a Router component that contains a Header component, a ScrollToTop
@@ -10,18 +10,21 @@ import {DataContextProvider} from './context/DataContext';
  * contains a Route component that contains a Home component.
  * @returns The return statement is returning the Router component.
  */
+
 const App = () => {
   return (
     <Router>
-      < Header />
-      <ScrollToTop>
-        <DataContextProvider>
-          <Routes>
-            <Route exact path='/sportSee/home' element= {<Home />}/>
-            <Route path ="*"/>
-          </Routes>
-        </DataContextProvider> 
-      </ScrollToTop>
+      <Header/>
+      <DataContextProvider>
+        <Routes>
+          <Route exact path='/sportSee/home/user/:userId' element= {<Home />}/>
+          <Route path ="*" element={
+        <main style={{ padding: "1rem" }}>
+          <p>There's nothing here!</p>
+        </main>
+      }/>
+        </Routes>
+      </DataContextProvider> 
     </Router>
   )
 }
