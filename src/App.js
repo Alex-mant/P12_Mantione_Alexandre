@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from './components/Header/Index';
 import Home from './pages/Home';
+import Error404 from './pages/404';
 import {DataContextProvider} from './context/DataContext';
 
 
@@ -18,11 +19,7 @@ const App = () => {
       <DataContextProvider>
         <Routes>
           <Route exact path='/sportSee/home/user/:userId' element= {<Home />}/>
-          <Route path ="*" element={
-        <main style={{ padding: "1rem" }}>
-          <p>There's nothing here!</p>
-        </main>
-      }/>
+          <Route path ="*" element={<Error404/>}/>
         </Routes>
       </DataContextProvider> 
     </Router>

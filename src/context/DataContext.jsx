@@ -18,18 +18,27 @@ const DataContextProvider = ({children}) => {
   const [error, setError] = useState();
 
   let thisId = useLocation().pathname.split("user/")[1]
+
+  let endpoints = [
+    `https://calm-gorge-80201.herokuapp.com/user/${thisId}`,
+    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/activity`,
+    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/performance`,
+    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/average-sessions`,   
+  ];
   
+
+  // in array for each object get each data object
   useEffect(() => {
-    const fetchData = async () => {   
-      await axios
-        .get(`https://calm-gorge-80201.herokuapp.com/user/${thisId}`)
-        .then((res) => setData(res.data.data))
-        .catch((error) => {
-          console.error(error)
-          setError(error)
-        })
-    };
-    fetchData();
+    axios
+      .all(endpoints.map((endpoint) => axios.get(endpoint)))
+      .then( axios.spread(({data:{data:mainData}}, {data:{data:activity}}, {data:{data:performance}}, {data:{data:sessions}}) => {
+        setData({ mainData, activity, performance, sessions });
+      }))
+      .catch((error) => {
+        console.error(error)
+        setError(error)
+      });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[thisId])
    
   return(

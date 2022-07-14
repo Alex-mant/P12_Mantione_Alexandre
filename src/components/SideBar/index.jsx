@@ -15,16 +15,19 @@ import "./styles.css"
 const SideBar = () => {
   const {data} = useContext(DataContext);
  
+  const keyData = {
+    calorieCount : data?.mainData.keyData.calorieCount.toLocaleString("en-us"),
+    proteinCount: data?.mainData.keyData.proteinCount.toLocaleString("en-us"),
+    carbohydrateCount: data?.mainData.keyData.carbohydrateCount.toLocaleString("en-us"),
+    lipidCount: data?.mainData.keyData.lipidCount.toLocaleString("en-us"),
+  }
+  
   return (
     <div className="sideBarData">
-    { data !== undefined ?
-      <>
-        <SideBarCard pathIcon={CaloriesIcon} iCount={data.keyData.calorieCount.toLocaleString('en-US')} strUnit={'kCal'} strNameOfCount={"Calories"}/>
-        <SideBarCard pathIcon={ProteinesIcon} iCount={data.keyData.proteinCount.toLocaleString('en-US')} strUnit={'g'} strNameOfCount={"Proteines"}/>    
-        <SideBarCard pathIcon={GlucidesIcon} iCount={data.keyData.carbohydrateCount.toLocaleString('en-US')} strUnit={'g'} strNameOfCount={"Glucides"}/>    
-        <SideBarCard pathIcon={LipidesIcon} iCount={data.keyData.lipidCount.toLocaleString('en-US')} strUnit={'g'} strNameOfCount={"Lipides"}/>    
-      </> : <h1 className='loading-data'>Loading...</h1>
-    }
+      <SideBarCard pathIcon={CaloriesIcon} iCount={keyData.calorieCount} strUnit={'kCal'} strNameOfCount={"Calories"}/>
+      <SideBarCard pathIcon={ProteinesIcon} iCount={keyData.proteinCount} strUnit={'g'} strNameOfCount={"Proteines"}/>    
+      <SideBarCard pathIcon={GlucidesIcon} iCount={keyData.carbohydrateCount} strUnit={'g'} strNameOfCount={"Glucides"}/>    
+      <SideBarCard pathIcon={LipidesIcon} iCount={keyData.lipidCount} strUnit={'g'} strNameOfCount={"Lipides"}/>    
     </div>
   );
 }
