@@ -8,8 +8,7 @@ import "./style.css";
  * "header_navbar" that contains four NavLink components.
  * @returns A React component
  */
-
-const Header = ({setCurrentId}) => {
+const Header = () => {
 
 return(
   <div className="Header">
@@ -18,10 +17,10 @@ return(
       <h1>SportSee</h1>
     </div>
     <nav className="header_navbar">
-      <NavLink to="#" className={"header_navlink"}>Accueil</NavLink>
-      <NavLink to="#" className={"header_navlink"}>Profil</NavLink>
-      <NavLink to="#" className={"header_navlink"}>Réglage</NavLink>
-      <NavLink to="#" className={"header_navlink"}>Communauté</NavLink>
+      <NavLink to="/sportSee/home" className={"header_navlink"}>Accueil</NavLink>
+      <NavLink to="/sportSee/home" className={"header_navlink"}>Profil</NavLink>
+      <NavLink to="/sportSee/home" className={"header_navlink"}>Réglage</NavLink>
+      <NavLink to="/sportSee/home" className={"header_navlink"}>Communauté</NavLink>
     </nav>
   </div>
 )
