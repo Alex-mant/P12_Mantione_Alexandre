@@ -2,8 +2,7 @@
   "name": "newproject",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://baseUrlOfApi.com/",
-  "homepage": "http://localhost:3000/",
+  "homepage": "http://localhost:3000/sportSee/home/user/12",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -14,17 +13,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "recharts": "^2.1.12",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "doc": "jsdoc -c jsdoc.json"
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose"
   },
   "eslintConfig": {
     "extends": [
@@ -45,9 +41,9 @@
     ]
   },
   "devDependencies": {
+    "clean-jsdoc-theme": "^4.1.2",
     "gh-pages": "^4.0.0",
     "jsdoc": "^3.6.10",
-    "node-sass": "^7.0.1",
-    "recharts": "^2.1.12"
+    "node-sass": "^7.0.1"
   }
 }
