@@ -35,7 +35,7 @@ const DataContextProvider = ({children}) => {
       }))
       .catch((error) => {
         console.error(error)
-        setError(error)
+        setError(error);
       });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[thisId])

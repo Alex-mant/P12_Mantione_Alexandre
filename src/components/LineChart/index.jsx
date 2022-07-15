@@ -24,7 +24,6 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
  const TinyLineChart = () => {
-
   const {data} = useContext(DataContext);
   let sessions = data?.sessions.sessions
   sessions = sessions?.map(({day, sessionLength}) => {
