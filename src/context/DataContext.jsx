@@ -29,7 +29,7 @@ const DataContextProvider = ({children}) => {
 
   // in array for each object get each data object
   useEffect(() => {
-    axios
+    Promise
       .all(endpoints.map((endpoint) => axios.get(endpoint)))
       .then( axios.spread(({data:{data:mainData}}, {data:{data:activity}}, {data:{data:performance}}, {data:{data:sessions}}) => {
         setData({ mainData, activity, performance, sessions });
