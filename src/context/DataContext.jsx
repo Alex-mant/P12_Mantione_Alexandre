@@ -20,10 +20,10 @@ const DataContextProvider = ({children}) => {
   let thisId = useLocation().pathname.split("user/")[1]
 
   let endpoints = [
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}`,
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/activity`,
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/performance`,
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/average-sessions`,  
+    `http://localhost:3000/user/${thisId}`,
+    `http://localhost:3000/user/${thisId}/activity`,
+    `http://localhost:3000/user/${thisId}/performance`,
+    `http://localhost:3000/user/${thisId}/average-sessions`,  
   ];
   
   // in array for each object get each data object
