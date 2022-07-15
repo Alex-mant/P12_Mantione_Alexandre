@@ -7,18 +7,18 @@ import "./style.css"
 export default function SimpleRadarChart () {
   const {data} = useContext(DataContext);
        
-  let kind = data?.performance.kind;
+  let perfKind = data?.performance.kind;
 
   /* A ternary operator. if kind Object value is undefined else transform kind object to array with only values of this object */
-  kind === undefined ? <h1>Loading...</h1> : kind = Object.values(kind);
+  perfKind === undefined ? <h1>Loading...</h1> : perfKind = Object.values(perfKind);
 
   /**
    * It takes a number and returns a string
    * @param {number} iKind
-   * @returns {Array} arrKind - The value of arrKind[iKind] if it exists, otherwise an empty string.
+   * @returns {Array} Kind - The value of arrKind[iKind] if it exists, otherwise an empty string.
    */
   const iKindToStrKind = (iKind) => {
-    return kind[iKind] || '';
+    return perfKind[iKind] || '';
   }
 
   let dataPerformance = data?.performance.data;
@@ -28,7 +28,7 @@ export default function SimpleRadarChart () {
   })
 
   return (
-    <>{kind === undefined ? <h1>Loading...</h1> : 
+    <>{dataPerformance === undefined ? <h1>Loading...</h1> : 
       <ResponsiveContainer className="performance-chart" width="100%" height="100%">
         <RadarChart className='radarChart' cx="48%" cy="50%" outerRadius="70%" data={dataPerformance}>
           <Layer color='#fff'/>
