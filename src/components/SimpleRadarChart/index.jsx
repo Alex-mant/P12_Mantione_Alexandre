@@ -30,14 +30,16 @@ export default function SimpleRadarChart () {
   })
 
   return (
-    <ResponsiveContainer className="intensity-chart" width="100%" height="100%">
-      <RadarChart className='radarChart' cx="48%" cy="50%" outerRadius="70%" data={dataPerformance}>
-        <Layer color='#fff'/>
-        <PolarGrid />
-        <PolarAngleAxis  dataKey="kind" />
-        <Radar name="intensity" dataKey="value" stroke="#FF0000" fill="#FF0000" fillOpacity={0.6} />
-      </RadarChart>
-    </ResponsiveContainer>
+    <>{kind === undefined ? <h1>Loading...</h1> : 
+      <ResponsiveContainer className="performance-chart" width="100%" height="100%">
+        <RadarChart className='radarChart' cx="48%" cy="50%" outerRadius="70%" data={dataPerformance}>
+          <Layer color='#fff'/>
+          <PolarGrid />
+          <PolarAngleAxis  dataKey="kind" />
+          <Radar name="intensity" dataKey="value" stroke="#FF0000" fill="#FF0000" fillOpacity={0.6} />
+        </RadarChart>
+      </ResponsiveContainer>
+    }</>
   );
 
 }
