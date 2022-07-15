@@ -7,20 +7,18 @@ import "./style.css"
 export default function SimpleRadarChart () {
   const {data} = useContext(DataContext);
        
-  const kind = data?.performance.kind;
-
- /* A variable that is used to store the value of the `kind` property of the `data` object. */
-  let arrKind;
+  let kind = data?.performance.kind;
 
   /* A ternary operator. if kind Object value is undefined else transform kind object to array with only values of this object */
-  kind === undefined ? <h1>Loading...</h1> : arrKind = Object.values(kind);
+  kind === undefined ? <h1>Loading...</h1> : kind = Object.values(kind);
 
   /**
    * It takes a number and returns a string
-   * @returns The value of arrKind[iKind] if it exists, otherwise an empty string.
+   * @param {number} iKind
+   * @returns {Array} arrKind - The value of arrKind[iKind] if it exists, otherwise an empty string.
    */
   const iKindToStrKind = (iKind) => {
-    return arrKind[iKind] || '';
+    return kind[iKind] || '';
   }
 
   let dataPerformance = data?.performance.data;
