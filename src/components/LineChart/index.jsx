@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { LineChart, Line, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import { DataContext } from '../../context/DataContext';
 import "./styles.css"
-// keys : Name: L, uv:4000, pv:32, amt:2400
 
 const dayOfTheWeek = (day) => {
   return [ "L", "M", "M", "J", "V", "S", "D"][day] || ''
@@ -46,7 +45,7 @@ const CustomTooltip = ({ active, payload, label }) => {
             filter.style.background = 'red'
           }
         }}>
-          <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={25} tickLine={false} interval={0} dataKey="day"/>
+          <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={20} tickLine={false} interval={0} dataKey="day"/>
           <Line dot={false} activeDot={{ r: 4 }} type="natural" dataKey={"sessionLength"} stroke="white" strokeWidth={2} />
           <Tooltip  content={<CustomTooltip />} cursor={false} filterNull={false} />
         </LineChart>

@@ -59,7 +59,7 @@ const SimpleBarChart = () => {
                         tickLine={false}
                         padding={{ left: -40, right: -41.95 }}
                     />
-                    <YAxis tickSize={45} yAxisId="kilogram" domain={["dataMin -1", "dataMax +1"]} orientation="right"  tickCount={3} stroke={''} />
+                    <YAxis tickSize={45} yAxisId="kilogram" domain={["dataMin -1","dataMax +2"]} orientation="right"  tickCount={3} stroke={''} />
                     <YAxis yAxisId="calories" hide />
                     <Tooltip content={CustomTooltip} />
                     <Bar name="Poids (kg)" barSize={7} dataKey="kilogram" yAxisId="kilogram" fill="black" radius={[3, 3, 0, 0]} />
