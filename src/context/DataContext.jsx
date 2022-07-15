@@ -23,10 +23,9 @@ const DataContextProvider = ({children}) => {
     `https://calm-gorge-80201.herokuapp.com/user/${thisId}`,
     `https://calm-gorge-80201.herokuapp.com/user/${thisId}/activity`,
     `https://calm-gorge-80201.herokuapp.com/user/${thisId}/performance`,
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/average-sessions`,   
+    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/average-sessions`,  
   ];
   
-
   // in array for each object get each data object
   useEffect(() => {
     Promise
@@ -48,5 +47,4 @@ const DataContextProvider = ({children}) => {
   )
 }
 
-export {DataContext, DataContextProvider}
-
+export {DataContext, DataContextProvider};
