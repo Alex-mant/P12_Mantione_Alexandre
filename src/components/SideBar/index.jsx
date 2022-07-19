@@ -3,7 +3,8 @@ import CaloriesIcon from '../../assets/Calories-icon.svg';
 import GlucidesIcon from '../../assets/Glucides-icon.svg';
 import LipidesIcon from '../../assets/Lipides-icon.svg';
 import ProteinesIcon from '../../assets/Proteines-icon.svg';
-import { DataContext } from '../../context/DataContext';
+import UserData from '../../model/UserData';
+import { DataContext } from '../../services/DataContext';
 import SideBarCard from '../SideBarCards';
 import "./styles.css"
 
@@ -14,14 +15,9 @@ import "./styles.css"
  */
 const SideBar = () => {
   const {data} = useContext(DataContext);
- 
-  const keyData = {
-    calorieCount : data?.mainData.keyData.calorieCount.toLocaleString("en-us"),
-    proteinCount: data?.mainData.keyData.proteinCount.toLocaleString("en-us"),
-    carbohydrateCount: data?.mainData.keyData.carbohydrateCount.toLocaleString("en-us"),
-    lipidCount: data?.mainData.keyData.lipidCount.toLocaleString("en-us"),
-  }
-  
+  if (data === undefined) return <></>;
+  const {keyData} = new UserData(data);
+
   return (
     <div className="sideBarData">
       <SideBarCard pathIcon={CaloriesIcon} iCount={keyData.calorieCount} strUnit={'kCal'} strNameOfCount={"Calories"}/>

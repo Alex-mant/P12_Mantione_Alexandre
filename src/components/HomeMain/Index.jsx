@@ -1,11 +1,15 @@
 import { useContext } from "react";
-import { DataContext } from "../../context/DataContext";
+import UserData from "../../model/UserData";
+import { DataContext } from "../../services/DataContext";
 import HomeMainContent from "../HomeMainContent/Index";
 import "./style.css"
 
 const HomeMain = () => {
-  const {data} =  useContext(DataContext);
-  const firstName = data?.mainData.userInfos.firstName
+  const {data} = useContext(DataContext);
+  if(data===undefined) return <></>;
+  const {firstName} = new UserData(data);
+
+  console.log(firstName);
 
   return(    
     <div className="HomeMain">     

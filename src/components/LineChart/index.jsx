@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
 import { LineChart, Line, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
-import { DataContext } from '../../context/DataContext';
+import UserData from '../../model/UserData';
+import { DataContext } from '../../services/DataContext';
 import "./styles.css"
-
-const dayOfTheWeek = (day) => {
-  return [ "L", "M", "M", "J", "V", "S", "D"][day] || ''
-}
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
@@ -23,15 +20,13 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
- const TinyLineChart = () => {
+const TinyLineChart = () => {
   const {data} = useContext(DataContext);
-  let sessions = data?.sessions.sessions
-  sessions = sessions?.map(({day, sessionLength}) => {
-    return {sessionLength, day: day = dayOfTheWeek(day-1)}
-  })
- 
-    return (
-      <>
+  if (data === undefined) return <></>;
+  let {sessions} = new UserData(data);
+  
+  return (
+    <>
       <h3 className='linechart_title'>Durée moyenne des sessions</h3>
       <ResponsiveContainer  width={"100%"} height={126}>
         <LineChart name="linechart" className={"lineChart"} width={300} height={100} data={sessions} onMouseMove={(e) => {
@@ -41,7 +36,7 @@ const CustomTooltip = ({ active, payload, label }) => {
             let mouseXpercentage = Math.round((e.activeCoordinate.x/windowWidth)*100);
             filter.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`;
           }else{
-            filter.style.background = 'red'
+            filter.style.background = 'red';
           }
         }}>
           <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={20} tickLine={false} interval={0} dataKey="day"/>
@@ -49,8 +44,8 @@ const CustomTooltip = ({ active, payload, label }) => {
           <Tooltip  content={<CustomTooltip />} cursor={false} filterNull={false} />
         </LineChart>
       </ResponsiveContainer>
-      </>
-    );
+    </>
+  );
 
 }
 
