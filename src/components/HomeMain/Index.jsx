@@ -6,10 +6,8 @@ import "./style.css"
 
 const HomeMain = () => {
   const {data} = useContext(DataContext);
-  if(data===undefined) return <></>;
+  if(data === undefined) return <></>;
   const {firstName} = new UserData(data);
-
-  console.log(firstName);
 
   return(    
     <div className="HomeMain">     
