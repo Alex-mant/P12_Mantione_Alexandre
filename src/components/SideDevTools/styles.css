@@ -4,8 +4,8 @@
   right: 0;
   top: 145px;
   background-color: red;
-  height: 200px;
-  border-radius: 10px 0 0 10px;
+  height: 50px;
+  border-radius: 50% 0 0 50%;
   overflow: hidden;
   width: 50px;
 }
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: auto;
   padding: 10px;
 }
 .content-toggle{
@@ -49,4 +49,7 @@
 .devtools_userIcon{
   margin-right: 10px;
   width: 40px;
+}
+.subtitle{
+  padding-bottom: 15px;
 }

@@ -1,49 +1,49 @@
 const USER_MAIN_DATA = [
   {
-      id: 12,
+      id: 22,
       userInfos: {
           firstName: 'MockedUser1',
           lastName: 'Mocked',
           age: 100,
       },
-      todayScore: 0.12,
+      todayScore: 0.25,
       keyData: {
-          calorieCount: 1930,
-          proteinCount: 155,
-          carbohydrateCount: 290,
-          lipidCount: 50
+          calorieCount: 1230,
+          proteinCount: 165,
+          carbohydrateCount: 232,
+          lipidCount: 25
       }
   },
   {
-      id: 18,
+      id: 28,
       userInfos: {
           firstName: 'MockedUser2',
           lastName: 'Mocked',
           age: 100,
       },
-      score: 0.3,
+      score: 0.7,
       keyData: {
-          calorieCount: 2500,
-          proteinCount: 90,
-          carbohydrateCount: 150,
-          lipidCount: 120
+          calorieCount: 3500,
+          proteinCount: 60,
+          carbohydrateCount: 120,
+          lipidCount: 58
       }
   }
 ]
 
 const USER_ACTIVITY = [
   {
-      userId: 12,
+      userId: 22,
       sessions: [
           {
               day: '2020-07-01',
-              kilogram: 80,
-              calories: 240
+              kilogram: 84,
+              calories: 263
           },
           {
               day: '2020-07-02',
-              kilogram: 80,
-              calories: 220
+              kilogram: 82,
+              calories: 245
           },
           {
               day: '2020-07-03',
@@ -53,62 +53,62 @@ const USER_ACTIVITY = [
           {
               day: '2020-07-04',
               kilogram: 81,
-              calories: 290
+              calories: 254
           },
           {
               day: '2020-07-05',
               kilogram: 80,
-              calories: 160
+              calories: 124
           },
           {
               day: '2020-07-06',
               kilogram: 78,
-              calories: 162
+              calories: 165
           },
           {
               day: '2020-07-07',
               kilogram: 76,
-              calories: 390
+              calories: 462
           }
       ]
   },
   {
-      userId: 18,
+      userId: 28,
       sessions: [
           {
               day: '2020-07-01',
-              kilogram: 70,
-              calories: 240
+              kilogram: 72,
+              calories: 223
           },
           {
               day: '2020-07-02',
               kilogram: 69,
-              calories: 220
+              calories: 254
           },
           {
               day: '2020-07-03',
               kilogram: 70,
-              calories: 280
+              calories: 264
           },
           {
               day: '2020-07-04',
               kilogram: 70,
-              calories: 500
+              calories: 343
           },
           {
               day: '2020-07-05',
               kilogram: 69,
-              calories: 160
+              calories: 123
           },
           {
               day: '2020-07-06',
-              kilogram: 69,
-              calories: 162
+              kilogram: 67,
+              calories: 165
           },
           {
               day: '2020-07-07',
-              kilogram: 69,
-              calories: 390
+              kilogram: 66,
+              calories: 412
           }
       ]
   }
@@ -117,15 +117,15 @@ const USER_ACTIVITY = [
 
 const USER_AVERAGE_SESSIONS = [
   {
-      userId: 12,
+      userId: 22,
       sessions: [
           {
               day: 1,
-              sessionLength: 30
+              sessionLength: 35
           },
           {
               day: 2,
-              sessionLength: 23
+              sessionLength: 34
           },
           {
               day: 3,
@@ -137,11 +137,11 @@ const USER_AVERAGE_SESSIONS = [
           },
           {
               day: 5,
-              sessionLength: 0
+              sessionLength: 23
           },
           {
               day: 6,
-              sessionLength: 0
+              sessionLength: 26
           },
           {
               day: 7,
@@ -150,15 +150,15 @@ const USER_AVERAGE_SESSIONS = [
       ]
   },
   {
-      userId: 18,
+      userId: 28,
       sessions: [
           {
               day: 1,
-              sessionLength: 30
+              sessionLength: 36
           },
           {
               day: 2,
-              sessionLength: 40
+              sessionLength: 47
           },
           {
               day: 3,
@@ -166,11 +166,11 @@ const USER_AVERAGE_SESSIONS = [
           },
           {
               day: 4,
-              sessionLength: 30
+              sessionLength: 40
           },
           {
               day: 5,
-              sessionLength: 30
+              sessionLength: 37
           },
           {
               day: 6,
@@ -178,7 +178,7 @@ const USER_AVERAGE_SESSIONS = [
           },
           {
               day: 7,
-              sessionLength: 50
+              sessionLength: 70
           }
       ]
   }
@@ -187,7 +187,7 @@ const USER_AVERAGE_SESSIONS = [
 
 const USER_PERFORMANCE = [
   {
-      userId: 12,
+      userId: 22,
       kind: {
           1: 'cardio',
           2: 'energy',
@@ -198,19 +198,19 @@ const USER_PERFORMANCE = [
       },
       data: [
           {
-              value: 80,
+              value: 82,
               kind: 1
           },
           {
-              value: 120,
+              value: 150,
               kind: 2
           },
           {
-              value: 140,
+              value: 130,
               kind: 3
           },
           {
-              value: 50,
+              value: 120,
               kind: 4
           },
           {
@@ -218,13 +218,13 @@ const USER_PERFORMANCE = [
               kind: 5
           },
           {
-              value: 90,
+              value: 80,
               kind: 6
           }
       ]
   },
   {
-      userId: 18,
+      userId: 28,
       kind: {
           1: 'cardio',
           2: 'energy',
@@ -235,27 +235,27 @@ const USER_PERFORMANCE = [
       },
       data: [
           {
-              value: 200,
+              value: 210,
               kind: 1
           },
           {
-              value: 240,
+              value: 260,
               kind: 2
           },
           {
-              value: 80,
+              value: 180,
               kind: 3
           },
           {
-              value: 80,
+              value: 190,
               kind: 4
           },
           {
-              value: 220,
+              value: 168,
               kind: 5
           },
           {
-              value: 110,
+              value: 220,
               kind: 6
           }
       ]
