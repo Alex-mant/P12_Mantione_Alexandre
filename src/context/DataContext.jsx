@@ -20,23 +20,22 @@ const DataContextProvider = ({children}) => {
   let thisId = useLocation().pathname.split("user/")[1]
 
   let endpoints = [
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}`,
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/activity`,
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/performance`,
-    `https://calm-gorge-80201.herokuapp.com/user/${thisId}/average-sessions`,   
+    `http://localhost:3000/user/${thisId}`,
+    `http://localhost:3000/user/${thisId}/activity`,
+    `http://localhost:3000/user/${thisId}/performance`,
+    `http://localhost:3000/user/${thisId}/average-sessions`,  
   ];
   
-
   // in array for each object get each data object
   useEffect(() => {
-    axios
+    Promise
       .all(endpoints.map((endpoint) => axios.get(endpoint)))
       .then( axios.spread(({data:{data:mainData}}, {data:{data:activity}}, {data:{data:performance}}, {data:{data:sessions}}) => {
         setData({ mainData, activity, performance, sessions });
       }))
       .catch((error) => {
         console.error(error)
-        setError(error)
+        setError(error);
       });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[thisId])
@@ -48,5 +47,4 @@ const DataContextProvider = ({children}) => {
   )
 }
 
-export {DataContext, DataContextProvider}
-
+export {DataContext, DataContextProvider};

@@ -23,8 +23,8 @@ return(
           <h1>SportSee</h1>
         </div>
         <nav className="header_navbar">
-          <NavLink to="#" className={"header_navlink"}>Accueil</NavLink>
-          <NavLink to="#" className={"header_navlink"}>Profil</NavLink>
+          <NavLink to="/sportSee/home/user/12" className={"header_navlink"}>Accueil</NavLink>
+          <NavLink to="/sportSee/home/user/18" className={"header_navlink"}>Profil</NavLink>
           <NavLink to="#" className={"header_navlink"}>Réglage</NavLink>
           <NavLink to="#" className={"header_navlink"}>Communauté</NavLink>
         </nav>

@@ -1,58 +1,43 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { useContext } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Layer } from 'recharts';
+import { DataContext } from '../../context/DataContext';
 import "./style.css"
 
-const data = [
-  {
-    subject: 'Intensité',
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: 'Vitesse',
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: 'Force',
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: 'Endurance',
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: 'Energie',
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: 'Cardio',
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
+export default function SimpleRadarChart () {
+  const {data} = useContext(DataContext);
+       
+  let perfKind = data?.performance.kind;
 
-export default class SimpleRadarChart extends PureComponent {
+  /* A ternary operator. if kind Object value is undefined else transform kind object to array with only values of this object */
+  perfKind === undefined ? <h1>Loading...</h1> : perfKind = Object.values(perfKind);
 
-  render() {
-    return (
-      <ResponsiveContainer className="intensity-chart" width="100%" height="100%">
-        <RadarChart className='radarChart' cx="50%" cy="50%" outerRadius="80%" data={data}>
+  /**
+   * It takes a number and returns a string
+   * @param {number} iKind
+   * @returns {Array} Kind - The value of arrKind[iKind] if it exists, otherwise an empty string.
+   */
+  const iKindToStrKind = (iKind) => {
+    return perfKind[iKind] || '';
+  }
+
+  let dataPerformance = data?.performance.data;
+ /* A ternary operator. If dataPerformance is undefined, it returns undefined, otherwise it returns new value of kind object with iKindToStrKind function*/
+  dataPerformance = dataPerformance?.map(({value, kind}) => {
+    return {value , kind: iKindToStrKind(kind-1)}
+  })
+
+  return (
+    <>{dataPerformance === undefined ? <h1>Loading...</h1> : 
+      <ResponsiveContainer className="performance-chart" width="100%" height="100%">
+        <RadarChart className='radarChart' cx="48%" cy="50%" outerRadius="70%" data={dataPerformance}>
           <Layer color='#fff'/>
           <PolarGrid />
-          <PolarAngleAxis  dataKey="subject" />
-          <Radar name="intensity" dataKey="A" stroke="#FF0000" fill="#FF0000" fillOpacity={0.6} />
+          <PolarAngleAxis  dataKey="kind" />
+          <Radar name="intensity" dataKey="value" stroke="#FF0000" fill="#FF0000" fillOpacity={0.6} />
         </RadarChart>
       </ResponsiveContainer>
-    );
-  }
+    }</>
+  );
+
 }
