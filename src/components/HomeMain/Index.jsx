@@ -6,7 +6,7 @@ import "./style.css"
 
 const HomeMain = () => {
   const {data} = useContext(DataContext);
-  if(data === undefined) return <><h1 className="title">Loading...</h1></>;
+  if(data === undefined) return <><div className="loading"><h1>Loading...</h1></div></>;
   const {firstName} = new UserData(data);
 
   return(    

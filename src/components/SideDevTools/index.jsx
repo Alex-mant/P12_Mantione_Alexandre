@@ -12,7 +12,7 @@ const SideDevTools = () => {
     
     if (isHidden){
       tools.style.width = 'fit-content';
-      tools.style.height = "fit-content"
+      tools.style.height = "fit-content";
       tools.style.borderRadius =  '15px 0 0 15px';
       arrow.style.transform = 'rotate(135deg)';
       setIsHidden(false);
@@ -58,6 +58,14 @@ const SideDevTools = () => {
           <img className='devtools_userIcon' src={userIcon} alt="" />
           <Link to={"?mockedUser=28"}>
             Id 28
+          </Link>
+        </div>
+        <br/>
+        <span className='subtitle'>Other</span>
+        <div className='user'>
+          <img className='devtools_userIcon' src={userIcon} alt="" />
+          <Link to={"/spotsee/home?user=12"}>
+            404
           </Link>
         </div>
       </div>

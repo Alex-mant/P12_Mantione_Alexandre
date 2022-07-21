@@ -59,10 +59,10 @@ const retreiveMockedData = (setData, mockedId) => {
 
   const filterData = (array) => array.filter((data) => data.id ? data.id == mockedId : data.userId == mockedId)
 
-  const mainData = filterData(USER_MAIN_DATA)[0]
-  const activity = filterData(USER_ACTIVITY)[0]
-  const sessions = filterData(USER_AVERAGE_SESSIONS)[0]
-  const performance = filterData(USER_PERFORMANCE)[0]
+  const mainData = filterData(USER_MAIN_DATA)[0];
+  const activity = filterData(USER_ACTIVITY)[0];
+  const sessions = filterData(USER_AVERAGE_SESSIONS)[0];
+  const performance = filterData(USER_PERFORMANCE)[0];
   
   return setData({mainData, activity, sessions, performance})
 
