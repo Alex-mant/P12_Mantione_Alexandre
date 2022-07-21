@@ -13,7 +13,7 @@ const HomeMainContent = () => {
     <div className="UserData">
       <DisplayCharts/> 
       <SideBar/>
-      <SideDevTools/>
+      {/* <SideDevTools/> */}
     </div>
   )
 }
