@@ -1,0 +1,53 @@
+.horizontalCharts{
+  display: flex;
+  flex-direction: column;
+  max-width: 835px;
+
+  .rechart1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    width: 100%;
+    height: 320px;
+    padding: 39px;
+    margin-bottom: 20px;
+  }
+
+  .rechart2{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 835px;
+    max-height: 263px;
+
+    .little-chart{
+      width: 31%;
+      height: 100%;
+    }
+
+    .average-duration{
+      background-color: #FF0000;
+      border-radius: 10px;
+    }
+
+    .intensity{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #282D30;  
+      border-radius: 10px;
+    }
+
+    .score{
+      position: relative;
+      background-color: #FBFBFB;  
+      border-radius: 10px;
+    }
+
+  }
+
+}

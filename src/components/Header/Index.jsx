@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/Logo.svg"
-import "./style.css";
+import "./style.scss";
 
 /**
  * It returns a div with a className of "Header" that contains a div with a className of "header_logo"

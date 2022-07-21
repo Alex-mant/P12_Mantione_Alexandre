@@ -1,0 +1,48 @@
+.Header{
+  display: flex;
+  background-color: #000;
+  color: #FFF;
+  margin: 0;
+  width: 100vw;
+  height: calc(calc(8.9*var(--rootHeight))/100);
+  
+  .header_logo{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    height: 107px;
+
+    h1{
+      margin-left: 10px;
+      font-size: 24px;
+      color: red;
+    }
+
+  }
+  
+  .header_navbar{
+    margin: 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+
+    .header_navlink{
+      margin-right: 204px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #FFF;
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+
+
+
+
+
+

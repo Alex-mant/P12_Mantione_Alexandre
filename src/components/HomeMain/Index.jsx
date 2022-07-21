@@ -2,7 +2,7 @@ import { useContext } from "react";
 import UserData from "../../model/UserData";
 import { DataContext } from "../../services/DataContext";
 import HomeMainContent from "../HomeMainContent/Index";
-import "./style.css"
+import "./style.scss"
 
 const HomeMain = () => {
   const {data} = useContext(DataContext);

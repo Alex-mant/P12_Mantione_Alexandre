@@ -6,7 +6,7 @@ import ProteinesIcon from '../../assets/Proteines-icon.svg';
 import UserData from '../../model/UserData';
 import { DataContext } from '../../services/DataContext';
 import SideBarCard from '../SideBarCards';
-import "./styles.css"
+import "./styles.scss"
 
 
 /**

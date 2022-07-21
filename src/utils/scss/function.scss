@@ -1,0 +1,9 @@
+/* It's a function that takes 3 arguments:
+$pixel - : the pixel value you want to scale
+$initialValue - : DESCRIPTION 
+$rootValue - : DESCRIPTION */
+@function scaleMyValue($pixel, $initialValue, $rootValue){
+  $percentil: ($pixel*100)/$initialValue;
+
+  @return ($percentil*$rootValue)/100
+};

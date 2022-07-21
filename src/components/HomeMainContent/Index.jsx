@@ -1,7 +1,7 @@
 import DisplayCharts from "../DisplayCharts";
 import SideBar from "../SideBar";
-import SideDevTools from "../SideDevTools/index";
-import "./style.css"
+// import SideDevTools from "../SideDevTools/index";
+import "./style.scss"
 
 
 /**
