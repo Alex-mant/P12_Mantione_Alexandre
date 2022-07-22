@@ -7,7 +7,7 @@
   .title{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 48px;
+    font-size: scaleMyFont(48px, 1440px);
 
     .title_userName{
       color: red;
@@ -18,7 +18,7 @@
   .motivational-text{
     padding: 40px 0 77px;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: scaleMyFont(18px, 1440px);
     font-weight: 400;
   }
 
@@ -29,7 +29,7 @@
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.568);
   position: fixed;
-  font-size: 55px;
+  font-size: scaleMyFont(55px, 1440px);
   top: 0;
   left: 0;
   

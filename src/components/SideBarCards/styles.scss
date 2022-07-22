@@ -3,8 +3,8 @@
   align-items: center;
   background-color: #FBFBFB;
   border-radius: 10px;
-  width: 258px;
-  height: 124px;
+  width: scaleMyValue(258px, 1440px, 100vw);
+  height: scaleMyValue(124px, 1024px, 100vh);
 
   .sidebar-icon-info{
     margin: auto 31px auto 24px;
@@ -13,12 +13,12 @@
   .sideBarData_textData{
     color: #282D30;
     font-weight: 700;
-    font-size: 20px;
+    font-size: scaleMyFont(20px, 1440px);
   }
 
   .sideBarData_textData2{
     font-weight: 500;
-    font-size: 14px;
+    font-size: scaleMyFont(14px, 1440px);
     color: #74798C;
   }
 

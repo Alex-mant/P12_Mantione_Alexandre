@@ -1,9 +1,16 @@
 /* It's a function that takes 3 arguments:
-$pixel - : the pixel value you want to scale
-$initialValue - : DESCRIPTION 
+$absoluteSize - : the pixel value you want to scale
+$initialbreakpoint - : DESCRIPTION 
 $rootValue - : DESCRIPTION */
-@function scaleMyValue($pixel, $initialValue, $rootValue){
-  $percentil: ($pixel*100)/$initialValue;
+@function scaleMyValue($absoluteSize, $initialbreakpoint, $rootValue){
+  $percentil: ($absoluteSize*100)/$initialbreakpoint;
 
   @return ($percentil*$rootValue)/100
 };
+
+/* It's a function that takes 2 arguments:
+ - : the pixel value you want to scale
+ - : DESCRIPTION */
+@function scaleMyFont($absoluteSize, $initialbreakpoint){
+  @return (($absoluteSize / $initialbreakpoint) * 100) + vw
+}

@@ -1,7 +1,7 @@
 .horizontalCharts{
   display: flex;
   flex-direction: column;
-  max-width: 835px;
+  width: scaleMyValue(835px, 1440px, 100vw);
 
   .rechart1{
     position: relative;
@@ -12,7 +12,7 @@
     background-color: #FBFBFB;
     border-radius: 10px;
     width: 100%;
-    height: 320px;
+    height: scaleMyValue(320px, 1024px, 100vh);
     padding: 39px;
     margin-bottom: 20px;
   }
@@ -21,11 +21,11 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 835px;
-    max-height: 263px;
+    width: scaleMyValue(835px, 1440px, 100vw);
+    height: scaleMyValue(263px, 1024px, 100vh);;
 
     .little-chart{
-      width: 31%;
+      width: scaleMyValue(258px, 1440px, 100vw);
       height: 100%;
     }
 

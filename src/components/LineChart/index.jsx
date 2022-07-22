@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { LineChart, Line, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import UserData from '../../model/UserData';
 import { DataContext } from '../../services/DataContext';
-import "./styles.css"
+import "./styles.scss"
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {

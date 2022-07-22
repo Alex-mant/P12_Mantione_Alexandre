@@ -1,0 +1,44 @@
+@import "../../utils/scss/function.scss";
+
+.verticalNavBar{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  width: scaleMyValue(117px, 1440px, 100vw);
+  height: scaleMyValue(933px, 1024px, 100vh); 
+
+  .verticalNavBar_btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .vertical-filter{
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    img{
+      width: scaleMyValue(64px, 1440px, 100vw);
+    }
+
+  }
+
+  .copyright{
+    font-weight: 500;
+    font-size: scaleMyFont(12px, 1440px);
+    white-space: nowrap;
+    position: absolute;
+    transform-origin: left;
+    transform: rotate(270deg);
+    bottom: scaleMyValue(60px, 1024px, 100vh);
+    left: 50%;
+  }
+
+}
+
+
+

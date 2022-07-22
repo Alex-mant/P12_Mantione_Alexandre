@@ -1,36 +1,41 @@
+@import "../../utils/scss/function.scss";
+
+
 .Header{
   display: flex;
   background-color: #000;
   color: #FFF;
   margin: 0;
   width: 100vw;
-  height: calc(calc(8.9*var(--rootHeight))/100);
+  height: scaleMyValue(91px, 1024px, 100vh);
   
   .header_logo{
     display: flex;
     align-items: center;
-    padding: 15px 20px;
-    height: 107px;
+    margin-left: scaleMyValue(30px, 1440px, 100vw);
+    width: scaleMyValue(52px, 1440px, 100vw);
 
     h1{
+      position: relative;
+      z-index: 2;
       margin-left: 10px;
-      font-size: 24px;
+      font-size: scaleMyFont(24px, 1440px);
       color: red;
     }
 
   }
   
   .header_navbar{
-    margin: 0 120px;
+    width: 100vw;
+    padding:0 scaleMyValue(200px, 1440px, 100vw);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #000;
 
     .header_navlink{
-      margin-right: 204px;
       font-family: 'Roboto', sans-serif;
-      font-size: 24px;
+      font-size: scaleMyFont(24px, 1440px);
       font-weight: 500;
       color: #FFF;
       text-decoration: none;

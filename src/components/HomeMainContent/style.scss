@@ -5,7 +5,7 @@
 
 .chart1_legend{
   position: absolute;
-  width: 280px;
+  width: scaleMyValue(280px, 1440px, 100vw);
   display: flex;
   justify-content: space-between;
   top: 20px;
@@ -15,17 +15,17 @@
   position: absolute;
   top: 20px;
   left: 30px;
-  font-size: 15px;
+  font-size: scaleMyFont(15px, 1440px);
   font-weight: 500;
 }
 .barLegend{
   align-items: center;
   display: flex;
-  font-size: 14px;
+  font-size: scaleMyFont(14px, 1440px);
 }
 .fill1{
-  width: 10px;
-  height: 10px;
+  width: scaleMyValue(10px, 1440px, 100vw);
+  height: scaleMyValue(10px, 1024px, 100vh);
   margin-right: 10px;
   background-color: #282D30;
   border: 1px solid #282D30;
@@ -33,8 +33,8 @@
 }
 
 .fill2{
-  width: 10px;
-  height: 10px;
+  width: scaleMyValue(10px, 1440px, 100vw);
+  height: scaleMyValue(10px, 1024px, 100vh);
   margin-right: 10px;
   background-color: #E60000;
   border: 1px solid #E60000;
