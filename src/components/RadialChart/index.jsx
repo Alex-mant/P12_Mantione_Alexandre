@@ -1,7 +1,6 @@
-import "./styles.css";
 import React, { useContext } from "react";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
-import "./styles.css"
+import "./styles.scss"
 import { DataContext } from "../../services/DataContext";
 import UserData from "../../model/UserData";
 

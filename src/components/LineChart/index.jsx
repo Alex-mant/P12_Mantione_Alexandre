@@ -39,7 +39,7 @@ const TinyLineChart = () => {
             filter.style.background = 'red';
           }
         }}>
-          <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={20} tickLine={false} interval={0} dataKey="day"/>
+          <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={10} tickLine={false} interval={0} dataKey="day"/>
           <Line dot={false} activeDot={{ r: 4 }} type="natural" dataKey={"sessionLength"} stroke="white" strokeWidth={2} />
           <Tooltip  content={<CustomTooltip />} cursor={false} filterNull={false} />
         </LineChart>

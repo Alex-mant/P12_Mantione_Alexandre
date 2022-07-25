@@ -1,8 +1,8 @@
 @import "../../utils/scss/function.scss";
 
 .lineChart{
-  margin-top: 20px;
   height: scaleMyValue(121px, 1024px, 100vh);
+  padding-top: scaleMyValue(10px, 1024px, 100vh);
 
   .custom-tooltip{
     font-size: scaleMyfont(12px, 1440px);
@@ -29,10 +29,10 @@
 }
 
 .linechart_title{
-  padding: 29px 34px;
-  padding: scaleMyValue(29px, 1024px, 100vh) scaleMyValue(34px, 1440px, 100vw);
-  width: scaleMyValue(220px, 1024px, 100vw);
+  padding: scaleMyValue(30px, 1024px, 100vh) 0 0 scaleMyValue(15px, 1440px, 100vw);  
+  width: scaleMyValue(150px, 1024px, 100vw);
   color: #ffffff5e;
+  font-size: scaleMyFont(16px, 1440px);
 }
 .horizontalCharts .rechart2 .average-duration div.recharts-responsive-container{
   width: auto;

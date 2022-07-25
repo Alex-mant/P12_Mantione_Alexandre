@@ -1,3 +1,5 @@
+@import "../../utils/scss/function.scss";
+
 .horizontalCharts{
   display: flex;
   flex-direction: column;
@@ -13,8 +15,9 @@
     border-radius: 10px;
     width: 100%;
     height: scaleMyValue(320px, 1024px, 100vh);
-    padding: 39px;
-    margin-bottom: 20px;
+    padding: scaleMyValue(39px, 1024px, 100vh) scaleMyValue(39px, 1440px, 100vw);
+    margin-bottom: scaleMyValue(20px, 1024px, 100vh);
+    padding-left: 0;
   }
 
   .rechart2{
@@ -25,8 +28,9 @@
     height: scaleMyValue(263px, 1024px, 100vh);;
 
     .little-chart{
+      position: relative;
       width: scaleMyValue(258px, 1440px, 100vw);
-      height: 100%;
+      height: scaleMyValue(258px, 1024px, 100vh);
     }
 
     .average-duration{
