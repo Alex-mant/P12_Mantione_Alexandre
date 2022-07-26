@@ -5,24 +5,23 @@
   align-items: center;
   background-color: #FBFBFB;
   border-radius: 10px;
-  width: scaleMyValue(258px, 1440px, 100vw);
+  width: 258px;
   max-width: 258px;
-  height: scaleMyValue(124px, 1024px, 100vh);
-  max-height: 124px;
+  height: 124px;
 
   .sidebar-icon-info{
-    margin: auto scaleMyValue(31px, 1440px, 100vw) auto scaleMyValue(24px, 1440px, 100vw);
+    margin: auto 31px auto 24px;
   }
 
   .sideBarData_textData{
     color: #282D30;
     font-weight: 700;
-    font-size: Min(scaleMyFont(20px, 1440px),20px);
+    font-size: 20px;
   }
 
   .sideBarData_textData2{
     font-weight: 500;
-    font-size: Min(scaleMyFont(14px, 1440px), 14px);
+    font-size:14px;
     color: #74798C;
   }
 

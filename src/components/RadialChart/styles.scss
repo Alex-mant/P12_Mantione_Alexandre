@@ -1,16 +1,16 @@
 @import "../../utils/scss/function.scss";
 
 .radialBarChart{
-  margin-top: scaleMyValue(-65px, 1024px, 100vh);
+  margin-top: -65px;
   
   .progress-label{
-    font-size: Min(scaleMyFont(18px, 1440px),18px);
+    font-size: 18px;
     font-weight: 500;
     fill:#000
   }
 
   text{
-    font-size: Min(scaleMyFont(15px, 1440px), 15px);
+    font-size: 15px;
     font-weight: 500;
     fill: #74798C;
   }
@@ -19,6 +19,6 @@
 
 .radialBarChart_title{
   font-weight: 500;
-  font-size: Min(scaleMyFont(15px, 1440px),15px);
-  padding: scaleMyValue(30px, 1024px, 100vh) scaleMyValue(30px, 1440px, 100vw)
+  font-size: 15px;
+  padding: 30px;
 }

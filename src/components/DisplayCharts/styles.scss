@@ -3,8 +3,7 @@
 .horizontalCharts{
   display: flex;
   flex-direction: column;
-  width: scaleMyValue(835px, 1440px, 100vw);
-  max-width: 835px;
+  width: 835px;
 
   .rechart1{
     position: relative;
@@ -14,27 +13,23 @@
     align-items: center;
     background-color: #FBFBFB;
     border-radius: 10px;
-    padding: scaleMyValue(39px, 1024px, 100vh) scaleMyValue(39px, 1440px, 100vw);
-    margin-bottom: scaleMyValue(20px, 1024px, 100vh);
+    padding: 39px;
+    margin-bottom: 20px;
     padding-left: 0;
   }
 
   .rechart2{
-    margin-top: scaleMyValue(40px, 1024px, 100vh);
+    margin-top: 40px;
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: scaleMyValue(835px, 1440px, 100vw);
-    max-width: 835px;
-    height: scaleMyValue(263px, 1024px, 100vh);
-    max-height: 263px;
+    width: 835px;
+    height: 263px;
 
     .little-chart{
       position: relative;
-      width: scaleMyValue(258px, 1440px, 100vw);
-      max-width: 258px;
-      height: scaleMyValue(258px, 1024px, 100vh);
-      max-height: 258px;
+      width: 258px;
+      height: 258px;
     }
 
     .average-duration{
