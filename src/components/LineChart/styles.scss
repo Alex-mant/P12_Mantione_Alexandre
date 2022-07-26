@@ -2,42 +2,47 @@
 
 .lineChart{
   height: scaleMyValue(121px, 1024px, 100vh);
+  max-height: 121px;
   padding-top: scaleMyValue(10px, 1024px, 100vh);
 
   .custom-tooltip{
-    font-size: scaleMyfont(12px, 1440px);
+    font-size: Min(scaleMyfont(12px, 1440px), 12px);
     font-weight: 500;
-    font-size: 'roboto';
+    font-family: 'roboto';
     width:fit-content;
     height: fit-content;
     background-color: #FFF;
-    padding: 5px;
+    padding: scaleMyValue(5px, 1024px, 100vh) scaleMyValue(5px, 1440px, 100vw);
 
     .label{
       color: #000;
-      font-size: scaleMyfont(12px, 1440px);
+      font-size: Min(scaleMyfont(12px, 1440px),12px);
     }
 
   }
 
-  tspan{
-    fill:#FFF;
-    font-size: scaleMyfont(12px, 1440px);
-  
+  text{
+    fill:#FFF;  
+    font-size: 12px
   }
+  
 
 }
 
 .linechart_title{
   padding: scaleMyValue(30px, 1024px, 100vh) 0 0 scaleMyValue(15px, 1440px, 100vw);  
   width: scaleMyValue(150px, 1024px, 100vw);
+  max-width: 150px;
   color: #ffffff5e;
-  font-size: scaleMyFont(16px, 1440px);
+  font-size: Min(scaleMyFont(16px, 1440px),16px);
 }
 .horizontalCharts .rechart2 .average-duration div.recharts-responsive-container{
   width: auto;
   height: auto;
+
+  
 }
 .responsiveContainer{
-  height: scaleMyValue(263px, 1024px, 100vh)
+  height: scaleMyValue(263px, 1024px, 100vh);
+  max-height: 263px;
 }

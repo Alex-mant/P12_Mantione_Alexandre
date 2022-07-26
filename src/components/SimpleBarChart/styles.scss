@@ -1,0 +1,27 @@
+@import "../../utils/scss/function.scss";
+
+.barchart {
+  tspan{
+    fill: #9B9EAC;
+    font-size: Min(scaleMyFont(14px, 1440px),14px);
+  }
+  .chart-title{
+    font-size: 13px;
+  }
+  span{
+    font-size: 13px;
+  }
+}
+.chart-title{
+  fill: black;
+}
+
+.custom-tooltip{
+  padding: scaleMyValue(15px, 1024px, 100vh) scaleMyValue(5px, 1440px, 100vw);
+  background: red;
+}
+.label{
+  font-size: 10px;
+  padding: scaleMyValue(10px, 1024px, 100vh) scaleMyValue(10px, 1440px, 100vw);
+  color: #fff;
+}

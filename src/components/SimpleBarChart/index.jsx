@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.scss";
 import React, { useContext } from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { DataContext } from "../../services/DataContext";
@@ -54,11 +54,11 @@ const SimpleBarChart = () => {
                         <CartesianGrid horizontal={true} vertical={false} strokeDasharray="3 3" />
                         <XAxis
                             dataKey="day"
-                            tickSize={15}
+                            tickSize={10}
                             tickLine={false}
                             padding={{ left: -40, right: -41.95 }}
                         />
-                        <YAxis tickSize={45} yAxisId="kilogram" domain={["dataMin -1","dataMax +2"]} orientation="right"  tickCount={3} stroke={''} />
+                        <YAxis tickSize={24} yAxisId="kilogram" domain={["dataMin -1","dataMax +2"]} orientation="right"  tickCount={3} stroke={''} />
                         <YAxis yAxisId="calories" hide />
                         <Tooltip content={CustomTooltip} />
                         <Bar name="Poids (kg)" barSize={7} dataKey="kilogram" yAxisId="kilogram" fill="black" radius={[3, 3, 0, 0]} />

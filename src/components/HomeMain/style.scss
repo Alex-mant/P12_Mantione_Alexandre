@@ -7,7 +7,7 @@
   .title{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: scaleMyFont(48px, 1440px);
+    font-size: Min(scaleMyFont(48px, 1440px), 48px);
 
     .title_userName{
       color: red;
@@ -16,9 +16,9 @@
   }
 
   .motivational-text{
-    padding: 40px 0 77px;
+    padding: scaleMyValue(40px, 1024px, 100vh) 0 scaleMyValue(77px, 1440px, 100vw);
     font-family: 'Roboto', sans-serif;
-    font-size: scaleMyFont(18px, 1440px);
+    font-size: Min(scaleMyFont(18px, 1440px),18px);
     font-weight: 400;
   }
 
@@ -29,15 +29,13 @@
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.568);
   position: fixed;
-  font-size: scaleMyFont(55px, 1440px);
+  font-size: Min(scaleMyFont(55px, 1440px),55px);
   top: 0;
   left: 0;
   
-  .loading h1{
-    position: fixed;
-    top: 50vh;
-    left: 45vw;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 

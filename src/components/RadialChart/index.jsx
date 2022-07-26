@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import "./styles.scss"
 import { DataContext } from "../../services/DataContext";
 import UserData from "../../model/UserData";
 
-const circleSize = 250;
-
 export default function App() {
+  const [circleSize, setCircleSize] = useState(250);
+  const breakPoint = window.innerWidth
 
+  useEffect(() => {
+    breakPoint >= 1440 ? setCircleSize(250) : setCircleSize(190);
+  }, [breakPoint]);
+  
   const {data} = useContext(DataContext);
   if (data === undefined) return <></>;
   const score = [new UserData(data)]

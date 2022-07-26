@@ -6,27 +6,30 @@
 .chart1_legend{
   position: absolute;
   width: scaleMyValue(280px, 1440px, 100vw);
+  max-width: 280px;
   display: flex;
   justify-content: space-between;
-  top: 20px;
-  right: 35px;
+  top: scaleMyValue(20px, 1024px, 100vh);
+  right: scaleMyValue(35px, 1440px, 100vw);
 }
 .chart1_title{
   position: absolute;
-  top: 20px;
-  left: 30px;
-  font-size: scaleMyFont(15px, 1440px);
+  top: scaleMyValue(20px, 1024px, 100vh);
+  left: scaleMyValue(30px, 1440px, 100vw);
+  font-size: Min(scaleMyFont(15px, 1440px), 15px);
   font-weight: 500;
 }
 .barLegend{
   align-items: center;
   display: flex;
-  font-size: scaleMyFont(14px, 1440px);
+  font-size: Min(scaleMyFont(14px, 1440px), 14px)
 }
 .fill1{
   width: scaleMyValue(10px, 1440px, 100vw);
+  max-width: 10px;
   height: scaleMyValue(10px, 1024px, 100vh);
-  margin-right: 10px;
+  max-height: 10px;
+  margin-right: scaleMyValue(10px, 1440px, 100vw);
   background-color: #282D30;
   border: 1px solid #282D30;
   border-radius: 50%;
@@ -34,8 +37,10 @@
 
 .fill2{
   width: scaleMyValue(10px, 1440px, 100vw);
+  max-width: 10px;
   height: scaleMyValue(10px, 1024px, 100vh);
-  margin-right: 10px;
+  max-height: 10px;
+  margin-right: scaleMyValue(10px, 1440px, 100vw);
   background-color: #E60000;
   border: 1px solid #E60000;
   border-radius: 50%;
@@ -43,6 +48,6 @@
 
 .chart_dayActivity{
   position: absolute;
-  left: -35px;
-  bottom: -30px;
+  left: scaleMyValue(-35px, 1440px, 100vw);
+  bottom: scaleMyValue(-30px, 1024px, 100vh);
 }

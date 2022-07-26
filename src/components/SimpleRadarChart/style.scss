@@ -1,8 +1,10 @@
+@import "../../utils/scss/function.scss";
+
 .performance-chart{
   color: #fff;
 }
 
 .radarChart tspan{
-  font-size: 10px;
+  font-size: 9px;
   fill: #fff
 }

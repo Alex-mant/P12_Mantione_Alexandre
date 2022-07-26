@@ -1,6 +1,6 @@
 import DisplayCharts from "../DisplayCharts";
 import SideBar from "../SideBar";
-// import SideDevTools from "../SideDevTools/index";
+import SideDevTools from "../SideDevTools/index";
 import "./style.scss"
 
 
@@ -13,7 +13,7 @@ const HomeMainContent = () => {
     <div className="UserData">
       <DisplayCharts/> 
       <SideBar/>
-      {/* <SideDevTools/> */}
+      <SideDevTools/>
     </div>
   )
 }

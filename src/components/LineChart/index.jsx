@@ -28,7 +28,7 @@ const TinyLineChart = () => {
   return (
     <>
       <h3 className='linechart_title'>Durée moyenne des sessions</h3>
-      <ResponsiveContainer  width={"100%"} height={126}>
+      <ResponsiveContainer  width={"100%"} height={"60%"}>
         <LineChart name="linechart" className={"lineChart"} width={300} height={100} data={sessions} onMouseMove={(e) => {
           let filter = document.querySelector(".little-chart");
           if(e.isTooltipActive){
@@ -39,7 +39,7 @@ const TinyLineChart = () => {
             filter.style.background = 'red';
           }
         }}>
-          <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={10} tickLine={false} interval={0} dataKey="day"/>
+          <XAxis padding={{left:15,right:15}} stroke="transparent" tickSize={22} tickLine={false} interval={0} dataKey="day"/>
           <Line dot={false} activeDot={{ r: 4 }} type="natural" dataKey={"sessionLength"} stroke="white" strokeWidth={2} />
           <Tooltip  content={<CustomTooltip />} cursor={false} filterNull={false} />
         </LineChart>

@@ -8,18 +8,20 @@
   margin: 0;
   width: 100vw;
   height: scaleMyValue(91px, 1024px, 100vh);
+  max-height: 91px;
   
   .header_logo{
     display: flex;
     align-items: center;
     margin-left: scaleMyValue(30px, 1440px, 100vw);
     width: scaleMyValue(52px, 1440px, 100vw);
+    max-width: 52px;
 
     h1{
       position: relative;
       z-index: 2;
-      margin-left: 10px;
-      font-size: scaleMyFont(24px, 1440px);
+      margin-left: scaleMyValue(10px, 1440px, 100vw);
+      font-size: Min(scaleMyFont(24px, 1440px), 24px);
       color: red;
     }
 
@@ -27,7 +29,7 @@
   
   .header_navbar{
     width: 100vw;
-    padding:0 scaleMyValue(200px, 1440px, 100vw);
+    padding:0 25% 0 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +37,7 @@
 
     .header_navlink{
       font-family: 'Roboto', sans-serif;
-      font-size: scaleMyFont(24px, 1440px);
+      font-size: Min(scaleMyFont(24px, 1440px), 24px);
       font-weight: 500;
       color: #FFF;
       text-decoration: none;

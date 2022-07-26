@@ -1,7 +1,11 @@
+@import "../../utils/scss/function.scss";
+
+
 .sideBarData{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: scaleMyValue(258px, 1440px, 100vw);
-  margin-left: 30px;
+  max-width: 258px;
+  margin-left: scaleMyValue(30px, 1440px, 100vw);
 }
