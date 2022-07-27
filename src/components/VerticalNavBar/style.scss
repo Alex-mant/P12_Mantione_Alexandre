@@ -33,7 +33,6 @@
     font-weight: 500;
     font-size: 12px;
     white-space: nowrap;
-    transform-origin: left;
     transform: rotate(270deg);
   }
 
@@ -52,7 +51,7 @@
       }
     }
     .copyright{
-      transform-origin: initial;
+      font-size: 10px;
       margin-bottom: 40px;
     }
   }

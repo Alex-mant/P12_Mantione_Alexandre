@@ -1,7 +1,8 @@
-import SideDevTools from "../../utils/SideDevTools";
 import DisplayCharts from "../DisplayCharts";
 import SideBar from "../SideBar";
 import "./style.scss"
+// eslint-disable-next-line no-unused-vars
+import SideDevTools from "../../utils/SideDevTools";
 
 
 /**
