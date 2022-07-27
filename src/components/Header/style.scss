@@ -1,6 +1,3 @@
-@import "../../utils/scss/function.scss";
-
-
 .Header{
   display: flex;
   background-color: #000;
@@ -44,9 +41,22 @@
 
 }
 
-
-
-
-
-
-
+@media screen and (max-width: 1024px){
+  .Header{
+    height: 64.5px;
+    .header_logo{
+      img{
+        width: 41px;
+      }
+      h1{
+        font-size: 17px;
+      }
+    }
+    .header_navbar{
+      .header_navlink{
+        margin-right: 145px;
+        font-size: 17px;
+      }
+    }
+  }
+}

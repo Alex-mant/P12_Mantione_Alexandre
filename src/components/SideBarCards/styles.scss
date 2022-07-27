@@ -1,5 +1,3 @@
-@import "../../utils/scss/function.scss";
-
 .sideBarData_Info{
   display: flex;
   align-items: center;
@@ -27,4 +25,19 @@
 
 }
 
+@media screen and (max-width: 1024px){
+  .sideBarData_Info{
+    width: 183px;
+    height: 88px;
+    .sidebar-icon-info{
+      margin: auto 22px auto 17px;
+    }
+    .sideBarData_textData{
+      font-size: 14px;
+    }
+    .sideBarData_textData2{
+      font-size: 10px;
+    }
+  }
+}
 

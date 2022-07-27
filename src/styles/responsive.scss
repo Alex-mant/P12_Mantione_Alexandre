@@ -1,0 +1,9 @@
+/* this site has been integrated in "1440/1024px" by default */
+
+@media screen and (max-width: 1024px){
+  :root{
+    --rootHeight : 780px;
+    --rootWidth : 1024px;
+  }
+
+}

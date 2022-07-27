@@ -11,8 +11,9 @@ body {
 }
 /* Css reset */
 #root{
-  max-width: var(--rootWidth);
-  max-height: var(--rootHeight);
+  overflow: hidden;
+  width: var(--rootWidth);
+  height: var(--rootHeight);
 }
 html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6 {
   margin: 0;

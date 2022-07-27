@@ -47,3 +47,10 @@
   left: -35px;
   bottom: -30px;
 }
+
+@media screen and (max-width: 1024px){
+  .UserData{
+    width: 655px;
+    height: 470px;
+  }
+}

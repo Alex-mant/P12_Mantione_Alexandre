@@ -1,6 +1,6 @@
+import SideDevTools from "../../utils/SideDevTools";
 import DisplayCharts from "../DisplayCharts";
 import SideBar from "../SideBar";
-import SideDevTools from "../SideDevTools/index";
 import "./style.scss"
 
 

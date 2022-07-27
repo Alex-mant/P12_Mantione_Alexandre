@@ -1,5 +1,3 @@
-@import "../../utils/scss/function.scss";
-
 .horizontalCharts{
   display: flex;
   flex-direction: column;
@@ -19,7 +17,6 @@
   }
 
   .rechart2{
-    margin-top: 40px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -29,7 +26,7 @@
     .little-chart{
       position: relative;
       width: 258px;
-      height: 258px;
+      height: 263px;
     }
 
     .average-duration{
@@ -53,4 +50,17 @@
 
   }
 
+}
+
+@media screen and (max-width: 1024px){
+  .horizontalCharts{
+    width: 593px;
+    .rechart2{
+      width: 593px;
+      .little-chart{
+        width: 183px;
+        height: 187px;
+      }
+    }
+  }  
 }
