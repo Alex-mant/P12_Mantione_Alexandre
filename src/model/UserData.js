@@ -17,7 +17,15 @@ class UserData {
       return {day: day = new Date(day).getDate(), kilogram, calories}
     });
 
-    this._perfKind = Object.values(performance.kind);
+    this._perfKind = Object.values(performance.kind).map((kind) => {
+      if(kind === "cardio") return kind = "Cardio";
+      if(kind === "energy") return kind = "Energie";
+      if(kind === "endurance") return kind = "Endurance";
+      if(kind === "strength") return kind = "Force";
+      if(kind === "speed") return kind = "Vitesse";
+      if(kind === "intensity") return kind = "Intensité";
+      return kind
+    });
 
     this._performance = performance.data.map(({value, kind}) => {
       return {value, kind: this._perfKind[kind-1] || ''}
