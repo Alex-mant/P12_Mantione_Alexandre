@@ -1,4 +1,5 @@
-const locale = "en-us"
+const locale = "en-us";
+const firstLetterOfDay = ["L", "M", "M", "J", "V", "S", "D"];
 
 class UserData {
   constructor({
@@ -13,30 +14,16 @@ class UserData {
 
     this._userFirstName = mainData.userInfos.firstName;
 
-    this._activity = activity.sessions.map(({day, kilogram, calories}) => {
-      return {day: day = new Date(day).getDate(), kilogram, calories}
-    });
+    this._activity = formatAllSessionsActivity(activity.sessions);
 
-    this._perfKind = Object.values(performance.kind).map((kind) => {
-      if(kind === "cardio") return kind = "Cardio";
-      if(kind === "energy") return kind = "Energie";
-      if(kind === "endurance") return kind = "Endurance";
-      if(kind === "strength") return kind = "Force";
-      if(kind === "speed") return kind = "Vitesse";
-      if(kind === "intensity") return kind = "Intensité";
-      return kind
-    });
+    this._perfKind = translatedPerfKind(performance.kind);
 
-    this._performance = performance.data.map(({value, kind}) => {
-      return {value, kind: this._perfKind[kind-1] || ''}
-    });
+    this._performance = replaceValuesOfAnArrayByAnotherValues(performance.data, this._perfKind, 'kind', 'value');
 
-    this._score = mainData?.score*100 || mainData?.todayScore*100;
+    this._score = mainData.score*100 || mainData.todayScore*100;
 
-    this._sessions = sessions.sessions.map(({day, sessionLength}) => {
-      return ({sessionLength, day: day = ["L", "M", "M", "J", "V", "S", "D"][day-1] || ''})
-    });
-    
+    this._sessions = replaceValuesOfAnArrayByAnotherValues(sessions.sessions, firstLetterOfDay, 'day', 'sessionLength');
+        
     this._keyData = {
       calorieCount : mainData.keyData.calorieCount.toLocaleString(locale),
       proteinCount: mainData.keyData.proteinCount.toLocaleString(locale),
@@ -74,3 +61,31 @@ class UserData {
 }
 
 export default UserData;
+
+
+/* Data Formated */
+
+const translatedPerfKind = (object) => {
+ return Object.values(object).map((kind) => {
+    if(kind === "cardio") return kind = "Cardio";
+    if(kind === "energy") return kind = "Energie";
+    if(kind === "endurance") return kind = "Endurance";
+    if(kind === "strength") return kind = "Force";
+    if(kind === "speed") return kind = "Vitesse";
+    if(kind === "intensity") return kind = "Intensité";
+    return kind
+  })
+}
+
+const formatAllSessionsActivity = (array) => {
+ return array.map(({day, kilogram, calories}) => {
+    return {day: day = new Date(day).getDate(), kilogram, calories}
+  });
+}
+
+const replaceValuesOfAnArrayByAnotherValues = (dataArray, replacementArray, firstKey, secondKey) => {
+  const callBack = (a, b) => {
+    return {[secondKey]: b, [firstKey] :replacementArray[a-1]}
+  }
+  return dataArray.map((obj) => callBack(obj[firstKey], obj[secondKey]));
+}

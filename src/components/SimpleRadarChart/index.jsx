@@ -9,7 +9,7 @@ export default function SimpleRadarChart () {
   const {data} = useContext(DataContext);
   if (data === undefined) return <></>;
   const {performance: dataPerformance} = new UserData(data);
-
+  
   return (
     <>{dataPerformance === undefined ? <h1>Loading...</h1> : 
       <ResponsiveContainer className="performance-chart" width="100%" height="100%">
