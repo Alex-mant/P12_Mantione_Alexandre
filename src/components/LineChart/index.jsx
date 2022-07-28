@@ -34,7 +34,7 @@ const TinyLineChart = () => {
           if(e.isTooltipActive){
             let windowWidth = filter.clientWidth;
             let mouseXpercentage = Math.round((e.activeCoordinate.x/windowWidth)*100);
-            filter.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`;
+            filter.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(220,0,0,1.5) ${mouseXpercentage}%, rgba(220,0,0,1.5) 100%)`;
           }else{
             filter.style.background = 'red';
           }
