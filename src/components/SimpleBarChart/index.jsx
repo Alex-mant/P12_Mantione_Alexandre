@@ -56,7 +56,7 @@ const SimpleBarChart = () => {
                             dataKey="day"
                             tickSize={10}
                             tickLine={false}
-                            padding={{ left: -40, right: -41.95 }}
+                            padding={{ left: -44, right: -44 }}
                         />
                         <YAxis tickSize={24} yAxisId="kilogram" domain={["dataMin -1","dataMax +2"]} orientation="right"  tickCount={3} stroke={''} />
                         <YAxis yAxisId="calories" hide />
