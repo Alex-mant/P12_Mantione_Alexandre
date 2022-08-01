@@ -6,6 +6,9 @@ import userIcon from '../../assets/userIcon.svg'
 const SideDevTools = () => {
   const [isHidden, setIsHidden] = useState(true);
 
+  /**
+   * If the tools are hidden, then show them, else hide them.
+   */
   const toggleMe = () => {
     const tools = document.querySelector(".SideDevTools");
     const arrow = document.querySelector(".content-toggle");

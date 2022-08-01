@@ -4,7 +4,7 @@
  * @param {Array} array - the array of objects that you want to add fake data to
  * @returns The array with the new values added.
  */
- const addFakeDataForLineChart = (array) => {
+ const addMockedDataForLineChart = (array) => {
   if(array.length < 8){
     array.splice(0, 0, array[0]);
     array.splice(array.length , 0 , array[7]);
@@ -13,4 +13,4 @@
 }
 
 
-export default addFakeDataForLineChart;
+export default addMockedDataForLineChart;

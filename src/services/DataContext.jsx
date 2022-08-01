@@ -19,6 +19,9 @@ const DataContextProvider = ({children}) => {
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState();
 
+  /**
+   * It takes a string as an argument, and returns the value of the URL parameter with the same name
+   */
   const searchGet = (str) => new URLSearchParams(window.location.search).get(str);
   const userId = searchGet('user');
   const mockedId = searchGet('mockedUser');
@@ -57,6 +60,10 @@ const DataContextProvider = ({children}) => {
 
 const retreiveMockedData = (setData, mockedId) => {
 
+ /**
+  * It filters an array of objects and returns the object that has an id or userId that matches the
+  * mockedId
+  */
   const filterData = (array) => array.filter((data) => data.id ? data.id == mockedId : data.userId == mockedId)
 
   const mainData = filterData(USER_MAIN_DATA)[0];

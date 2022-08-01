@@ -1,6 +1,10 @@
 import React from 'react';
 import './style.scss'
 
+/**
+ * Convert the value of the input field to a number, and display
+ * the result in the result div.
+ */
 const convertThis = (el) => {
   const result = document.querySelector(".result");
 

@@ -1,4 +1,4 @@
-import addFakeDataForLineChart from "../utils/modelUtils/addFakeDataForLineChart";
+import addMockedForLineChart from "../utils/modelUtils/addMockedDataForLineChart";
 import formatAllSessionsActivity from "../utils/modelUtils/formatAllSessionsActivity";
 import replaceValuesOfAnArrayByAnotherValues from "../utils/modelUtils/replaceValuesOfAnArrayByAnotherValues";
 import translatedPerfKind from "../utils/modelUtils/translatedPerfKind";
@@ -27,7 +27,7 @@ class UserData {
 
     this._score = mainData.score*100 || mainData.todayScore*100;
 
-    this._sessions = replaceValuesOfAnArrayByAnotherValues(addFakeDataForLineChart(sessions.sessions), firstLetterOfDays, 'day', 'sessionLength', false);
+    this._sessions = replaceValuesOfAnArrayByAnotherValues(addMockedForLineChart(sessions.sessions), firstLetterOfDays, 'day', 'sessionLength', false);
         
     this._keyData = {
       calorieCount : mainData.keyData.calorieCount.toLocaleString(locale),
