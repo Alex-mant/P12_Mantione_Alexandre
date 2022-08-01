@@ -3,8 +3,8 @@ import formatAllSessionsActivity from "../utils/modelUtils/formatAllSessionsActi
 import replaceValuesOfAnArrayByAnotherValues from "../utils/modelUtils/replaceValuesOfAnArrayByAnotherValues";
 import translatedPerfKind from "../utils/modelUtils/translatedPerfKind";
 
-const locale = "en-us";
-const firstLetterOfDays = ["D","L", "M", "M", "J", "V", "S", "D","L"];
+// A déplacer
+const locale = 'en-us'
 
 class UserData {
   constructor({
@@ -14,27 +14,9 @@ class UserData {
     sessions
   }) {
     this._mainData = mainData;
-
-    this._userId = new URLSearchParams(window.location.search).get('user')
-
-    this._userFirstName = mainData.userInfos.firstName;
-
-    this._activity = formatAllSessionsActivity(activity.sessions);
-
-    this._perfKind = translatedPerfKind(performance.kind);
-
-    this._performance = replaceValuesOfAnArrayByAnotherValues(performance.data, this._perfKind, 'kind', 'value', true);
-
-    this._score = mainData.score*100 || mainData.todayScore*100;
-
-    this._sessions = replaceValuesOfAnArrayByAnotherValues(addMockedForLineChart(sessions.sessions), firstLetterOfDays, 'day', 'sessionLength', false);
-        
-    this._keyData = {
-      calorieCount : mainData.keyData.calorieCount.toLocaleString(locale),
-      proteinCount: mainData.keyData.proteinCount.toLocaleString(locale),
-      carbohydrateCount: mainData.keyData.carbohydrateCount.toLocaleString(locale),
-      lipidCount: mainData.keyData.lipidCount.toLocaleString(locale),
-    };
+    this._activity = activity;
+    this._performance = performance;
+    this._sessions = sessions;
   }
 
   //getter
@@ -51,16 +33,36 @@ class UserData {
     return this._sessions;
   }
   get score(){
-    return this._score;
+    return this._mainData.score*100 || this._mainData.todayScore*100;
   }
   get keyData(){
-    return this._keyData;
+    return this._mainData.keyData;
   }
   get firstName(){
-    return this._userFirstName
+    return this._mainData.userInfos.firstName
   }
   get currentId(){
-   return this._userId
+   return new URLSearchParams(window.location.search).get('user')
+  }
+  get formatActivity(){
+    return formatAllSessionsActivity(this._activity.sessions)
+  }
+  get perfKind(){
+    return translatedPerfKind(this._performance.kind)
+  }
+  get formatPerformance(){
+    return replaceValuesOfAnArrayByAnotherValues(this._performance.data, this.perfKind, 'kind', 'value', 'perf')
+  }
+  get formatSessions(){
+    return replaceValuesOfAnArrayByAnotherValues(addMockedForLineChart(this._sessions.sessions), 'noArray', 'day', 'sessionLength', 'sessions')
+  }
+  get formatKeyData(){
+    return {
+        calorieCount : this._mainData.keyData.calorieCount.toLocaleString(locale),
+        proteinCount: this._mainData.keyData.proteinCount.toLocaleString(locale),
+        carbohydrateCount: this._mainData.keyData.carbohydrateCount.toLocaleString(locale),
+        lipidCount: this._mainData.keyData.lipidCount.toLocaleString(locale),
+      }
   }
 }
 

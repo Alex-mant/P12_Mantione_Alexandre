@@ -2,14 +2,13 @@ import React, { useContext } from "react";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import "./styles.scss"
 import { DataContext } from "../../services/DataContext";
-import UserData from "../../model/UserData";
 
 export default function App() {
   const circleSize = 250;
   
   const {data} = useContext(DataContext);
-  if (data === undefined) return <></>;
-  const score = [new UserData(data)]
+  if (!data) return <></>;
+  const score = [data]
 
   return (
     <>

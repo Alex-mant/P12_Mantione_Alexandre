@@ -2,8 +2,6 @@ import "./styles.scss";
 import React, { useContext } from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { DataContext } from "../../services/DataContext";
-import UserData from "../../model/UserData";
-;
 
 const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -23,18 +21,18 @@ const CustomTooltip = ({ active, payload, label }) => {
 const SimpleBarChart = () => {
     
     const {data} = useContext(DataContext);
-    if(data === undefined) return <></>;
-    const {activity:dataSessions} = new UserData(data);
+    if(!data) return <></>;
+    const {formatActivity} = data;
 
     return (
-        <>{ data === undefined ? <h1 className="loader-title">Loading...</h1> :
+        <>{ !formatActivity  ? <h1 className="loader-title">Loading...</h1> :
             <>
                 <ResponsiveContainer  width="100%" aspect={3}>
                     <BarChart
                         className="barchart"
                         width={746.5}
                         height={196}
-                        data={dataSessions}
+                        data={formatActivity}
                         margin={{
                             top: 50,
                             right: 30,

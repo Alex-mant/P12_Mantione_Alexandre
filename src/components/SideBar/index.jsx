@@ -3,7 +3,6 @@ import CaloriesIcon from '../../assets/Calories-icon.svg';
 import GlucidesIcon from '../../assets/Glucides-icon.svg';
 import LipidesIcon from '../../assets/Lipides-icon.svg';
 import ProteinesIcon from '../../assets/Proteines-icon.svg';
-import UserData from '../../model/UserData';
 import { DataContext } from '../../services/DataContext';
 import SideBarCard from '../SideBarCards';
 import "./styles.scss"
@@ -15,8 +14,8 @@ import "./styles.scss"
  */
 const SideBar = () => {
   const {data} = useContext(DataContext);
-  if (data === undefined) return <></>;
-  const {keyData} = new UserData(data);
+  if (!data) return <></>;
+  const {formatKeyData: keyData} = data;
 
   return (
     <div className="sideBarData">

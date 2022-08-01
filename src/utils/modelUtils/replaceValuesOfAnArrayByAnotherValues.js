@@ -8,12 +8,12 @@
  * @param {Boolean} boolean - true or false for starting index 0 or index 1
  * @returns An array of objects.
  */
- const replaceValuesOfAnArrayByAnotherValues = (dataArray, replacementArray, firstKey, secondKey, boolean) => {
+ const replaceValuesOfAnArrayByAnotherValues = (dataArray, replacementArray, firstKey, secondKey, name) => {
   const callBack = (a, b) => {
-    if(boolean === true){
+    if(name === 'perf'){
       return {[secondKey]: b, [firstKey] :replacementArray[a-1]}
-    }else if (boolean === false){
-      return {[secondKey]: b, [firstKey] :replacementArray[a]}
+    }else if (name === 'sessions'){
+      return {[secondKey]: b, [firstKey] :["D", "L", "M", "M", "J", "V", "S", "D", "L"][a]}
     }
   }
   return dataArray.map((obj) => callBack(obj[firstKey], obj[secondKey]));

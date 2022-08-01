@@ -5,6 +5,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_MAIN_DATA, USER_PERFORMANCE } from '../mock/mockedData';
+import UserData from '../model/UserData';
 
 const DataContext = createContext();
 
@@ -42,7 +43,7 @@ const DataContextProvider = ({children}) => {
     Promise
     .all(endpoints.map((endpoint) => axios.get(rootUrl+endpoint)))
     .then( axios.spread(({data:{data:mainData}}, {data:{data:activity}}, {data:{data:performance}}, {data:{data:sessions}}) => {
-      setData({ mainData, activity, performance, sessions });
+      setData(new UserData({ mainData, activity, performance, sessions }));
     }))
     .catch((error) => {
       console.error(error)
@@ -71,7 +72,7 @@ const retreiveMockedData = (setData, mockedId) => {
   const sessions = filterData(USER_AVERAGE_SESSIONS)[0];
   const performance = filterData(USER_PERFORMANCE)[0];
   
-  return setData({mainData, activity, sessions, performance})
+  return setData(new UserData({mainData, activity, sessions, performance}))
 
 }
 

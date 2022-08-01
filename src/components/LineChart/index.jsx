@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { LineChart, Line, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
-import UserData from '../../model/UserData';
 import { DataContext } from '../../services/DataContext';
 import "./styles.scss"
 
@@ -22,8 +21,8 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const TinyLineChart = () => {
   const {data} = useContext(DataContext);
-  if (data === undefined) return <></>;
-  let {sessions} = new UserData(data);
+  if (!data) return <></>;
+  let {formatSessions:sessions} = data;
   
   return (
     <>

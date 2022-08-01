@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import UserData from "../../model/UserData";
 import { DataContext } from "../../services/DataContext";
 import HomeMainContent from "../HomeMainContent/Index";
 import "./style.scss"
@@ -7,9 +6,7 @@ import "./style.scss"
 const HomeMain = () => {
   const {data} = useContext(DataContext);
   if(!data) return <></>;
-  
-  const {firstName} = new UserData(data);
-
+  const {firstName} = data
   return(    
     <div className="HomeMain">
       <h1 className="title">Bonjour <span className="title_userName">{firstName}</span></h1>
