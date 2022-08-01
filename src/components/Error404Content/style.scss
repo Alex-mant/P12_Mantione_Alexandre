@@ -1,0 +1,38 @@
+.error-container{
+  min-width: 1024px;
+  min-height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .error_title1{
+    font-size: 200px;
+  }
+
+  .error_title2{
+    padding-bottom: 35px;
+    text-align: center;
+    width: 550px;
+    font-size: 40px;
+    border-bottom: solid 1px #000;
+  }
+
+  .error_link{
+    margin-top: 40px;
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .error-container{
+    .error_title1{
+      font-size: 142px;
+    }
+    .error_title2{
+      font-size: 28.5px;
+      width: 350px;
+    }
+  }
+}

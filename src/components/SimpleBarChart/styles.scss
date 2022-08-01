@@ -1,6 +1,14 @@
-.barchart tspan{
-  fill: #9B9EAC;
-  font-size: 14px;
+.barchart {
+  tspan{
+    fill: #9B9EAC;
+    font-size: 14px;
+  }
+  .chart-title{
+    font-size: 13px;
+  }
+  span{
+    font-size: 13px;
+  }
 }
 .chart-title{
   fill: black;

@@ -1,0 +1,56 @@
+.UserData{
+  display: flex;
+  max-width: 924px;
+}
+
+.chart1_legend{
+  position: absolute;
+  width: 280px;
+  max-width: 280px;
+  display: flex;
+  justify-content: space-between;
+  top: 20px;
+  right: 35px;
+}
+.chart1_title{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.barLegend{
+  align-items: center;
+  display: flex;
+  font-size: 14px
+}
+.fill1{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #282D30;
+  border: 1px solid #282D30;
+  border-radius: 50%;
+}
+
+.fill2{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #E60000;
+  border: 1px solid #E60000;
+  border-radius: 50%;
+}
+
+.chart_dayActivity{
+  position: absolute;
+  left: -35px;
+  bottom: -30px;
+}
+
+@media screen and (max-width: 1024px){
+  .UserData{
+    width: 655px;
+    height: 470px;
+  }
+}

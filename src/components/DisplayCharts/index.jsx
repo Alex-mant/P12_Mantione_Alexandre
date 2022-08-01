@@ -3,7 +3,7 @@ import TinyLineChart from '../LineChart';
 import SimpleBarChart from '../SimpleBarChart';
 import NormalPieChart from "../RadialChart";
 import SimpleRadarChart from '../SimpleRadarChart';
-import "./styles.css"
+import "./styles.scss"
 
 /**
  * The Charts function returns a div with two child divs, the first of which contains a SimpleBarChart

@@ -1,0 +1,39 @@
+.radialBarChart{
+  margin-top: -65px;
+  
+  .progress-label{
+    font-size: 18px;
+    font-weight: 500;
+    fill:#000
+  }
+
+  text{
+    font-size: 15px;
+    font-weight: 500;
+    fill: #74798C;
+  }
+  
+}
+
+.radialBarChart_title{
+  font-weight: 500;
+  font-size: 15px;
+  padding: 30px;
+}
+
+@media screen and (max-width: 1024px){
+  .score{
+    .radialBarChart_title{
+      font-size: 10.65px ;
+    }
+    svg.recharts-surface{
+      width: 177px;
+      height: 177px;
+    }
+    .recharts-wrapper.radialBarChart{
+      width: auto!important;
+      height: auto!important;
+    }
+  }
+  
+}

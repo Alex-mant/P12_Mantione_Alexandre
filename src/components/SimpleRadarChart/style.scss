@@ -1,0 +1,21 @@
+.performance-chart{
+  color: #fff;
+}
+
+.radarChart tspan{
+  font-size: 9px;
+  fill: #fff
+}
+
+@media screen and (max-width: 1024px){
+  .intensity{
+    .radarChart{
+      display: flex;
+      align-items: center;
+    }
+    svg.recharts-surface{
+      width: 183px;
+      height: 145px;
+    }
+  }  
+}

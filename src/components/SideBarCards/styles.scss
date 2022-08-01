@@ -1,0 +1,43 @@
+.sideBarData_Info{
+  display: flex;
+  align-items: center;
+  background-color: #FBFBFB;
+  border-radius: 10px;
+  width: 258px;
+  max-width: 258px;
+  height: 124px;
+
+  .sidebar-icon-info{
+    margin: auto 31px auto 24px;
+  }
+
+  .sideBarData_textData{
+    color: #282D30;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .sideBarData_textData2{
+    font-weight: 500;
+    font-size:14px;
+    color: #74798C;
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  .sideBarData_Info{
+    width: 183px;
+    height: 88px;
+    .sidebar-icon-info{
+      margin: auto 22px auto 17px;
+    }
+    .sideBarData_textData{
+      font-size: 14px;
+    }
+    .sideBarData_textData2{
+      font-size: 10px;
+    }
+  }
+}
+

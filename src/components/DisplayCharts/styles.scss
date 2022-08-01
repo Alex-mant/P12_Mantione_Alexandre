@@ -1,0 +1,66 @@
+.horizontalCharts{
+  display: flex;
+  flex-direction: column;
+  width: 835px;
+
+  .rechart1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    padding: 39px;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+
+  .rechart2{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 835px;
+    height: 263px;
+
+    .little-chart{
+      position: relative;
+      width: 258px;
+      height: 263px;
+    }
+
+    .average-duration{
+      background-color: #FF0000;
+      border-radius: 10px;
+    }
+
+    .intensity{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #282D30;  
+      border-radius: 10px;
+    }
+
+    .score{
+      position: relative;
+      background-color: #FBFBFB;  
+      border-radius: 10px;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  .horizontalCharts{
+    width: 593px;
+    .rechart2{
+      width: 593px;
+      .little-chart{
+        width: 183px;
+        height: 187px;
+      }
+    }
+  }  
+}

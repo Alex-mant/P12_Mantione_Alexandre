@@ -1,0 +1,52 @@
+.SideDevTools{
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 145px;
+  background-color: red;
+  height: 50px;
+  border-radius: 50% 0 0 50%;
+  overflow: hidden;
+  width: 50px;
+}
+
+.SideDevTools a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.devtools_title{
+  color: #fff;
+}
+
+.user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.togglerContainer{
+  background-color: #c51723;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 10px;
+}
+.content-toggle{
+  display: block;
+  border-top: #fff 3px solid;
+  border-left: #fff 3px solid;
+  width: 13px;
+  height: 13px;
+  transform: rotate(315deg);
+  margin: auto 15px auto 5px;
+}
+.sideDevContainer{
+  padding: 40px 40px 40px 20px;
+}
+.devtools_userIcon{
+  margin-right: 10px;
+  width: 40px;
+}

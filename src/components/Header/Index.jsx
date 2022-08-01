@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/Logo.svg"
-import "./style.css";
+import "./style.scss";
 
 /**
  * It returns a div with a className of "Header" that contains a div with a className of "header_logo"
@@ -23,10 +23,10 @@ return(
           <h1>SportSee</h1>
         </div>
         <nav className="header_navbar">
-          <NavLink to="#" className={"header_navlink"}>Accueil</NavLink>
-          <NavLink to="#" className={"header_navlink"}>Profil</NavLink>
-          <NavLink to="#" className={"header_navlink"}>Réglage</NavLink>
-          <NavLink to="#" className={"header_navlink"}>Communauté</NavLink>
+          <NavLink to="sportsee/home?user=12" className={"header_navlink"}>Accueil</NavLink>
+          <NavLink to="sportsee/home?user=12" className={"header_navlink"}>Profil</NavLink>
+          <NavLink to="sportsee/home?user=12" className={"header_navlink"}>Réglage</NavLink>
+          <NavLink to="sportsee/home?user=12" className={"header_navlink"}>Communauté</NavLink>
         </nav>
       </div> : <div></div>
     }
