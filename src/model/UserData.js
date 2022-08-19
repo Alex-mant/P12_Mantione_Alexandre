@@ -3,9 +3,12 @@ import formatAllSessionsActivity from "../utils/modelUtils/formatAllSessionsActi
 import replaceValuesOfAnArrayByAnotherValues from "../utils/modelUtils/replaceValuesOfAnArrayByAnotherValues";
 import translatedPerfKind from "../utils/modelUtils/translatedPerfKind";
 
-// A déplacer
 const locale = 'en-us'
 
+/**
+ * @class UserData
+ * @classdesc Permet de traiter/formater les datas avant utilisation.
+ */
 class UserData {
   constructor({
     mainData,
@@ -58,11 +61,11 @@ class UserData {
   }
   get formatKeyData(){
     return {
-        calorieCount : this._mainData.keyData.calorieCount.toLocaleString(locale),
-        proteinCount: this._mainData.keyData.proteinCount.toLocaleString(locale),
-        carbohydrateCount: this._mainData.keyData.carbohydrateCount.toLocaleString(locale),
-        lipidCount: this._mainData.keyData.lipidCount.toLocaleString(locale),
-      }
+      calorieCount : this._mainData.keyData.calorieCount.toLocaleString(locale),
+      proteinCount: this._mainData.keyData.proteinCount.toLocaleString(locale),
+      carbohydrateCount: this._mainData.keyData.carbohydrateCount.toLocaleString(locale),
+      lipidCount: this._mainData.keyData.lipidCount.toLocaleString(locale),
+    }
   }
 }
 
