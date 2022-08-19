@@ -21,8 +21,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 const SimpleBarChart = () => {
     
     const {data} = useContext(DataContext);
-    if(!data) return <></>;
-    const {formatActivity} = data;
+    const formatActivity = data?.formatActivity;
 
     return (
         <>{ !formatActivity  ? <h1 className="loader-title">Loading...</h1> :

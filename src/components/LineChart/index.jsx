@@ -21,8 +21,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const TinyLineChart = () => {
   const {data} = useContext(DataContext);
-  if (!data) return <></>;
-  let {formatSessions:sessions} = data;
+  let sessions = data?.formatSessions;
   
   return (
     <>

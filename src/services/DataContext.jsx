@@ -72,11 +72,8 @@ const retreiveMockedData = (setData, mockedId) => {
   const sessions = filterData(USER_AVERAGE_SESSIONS)[0];
   const performance = filterData(USER_PERFORMANCE)[0];
   
-  return setData(new UserData({mainData, activity, sessions, performance}))
+  return setData(new UserData({mainData, activity, sessions, performance}));
 
 }
-
-
-
 
 export {DataContext, DataContextProvider};

@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 
 
+/**
+ * It returns a 404 page content
+ * @returns A React component
+ */
 const Error404Content = () => {
   return (
       <div className='error-container'>

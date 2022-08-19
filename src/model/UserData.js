@@ -5,6 +5,10 @@ import translatedPerfKind from "../utils/modelUtils/translatedPerfKind";
 
 const locale = 'en-us'
 
+/**
+ * @class UserData
+ * @classdesc Permet de traiter/formater les datas avant utilisation.
+ */
 class UserData {
   constructor({
     mainData,

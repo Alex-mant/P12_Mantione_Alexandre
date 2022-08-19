@@ -12,17 +12,17 @@ import "./styles.scss"
  * It returns a div with four SideBarCard components inside.
  * @returns A React component.
  */
+
 const SideBar = () => {
   const {data} = useContext(DataContext);
-  if (!data) return <></>;
-  const {formatKeyData: keyData} = data;
+  const keyData = data?.formatKeyData;
 
   return (
     <div className="sideBarData">
-      <SideBarCard pathIcon={CaloriesIcon} iCount={keyData.calorieCount} strUnit={'kCal'} strNameOfCount={"Calories"}/>
-      <SideBarCard pathIcon={ProteinesIcon} iCount={keyData.proteinCount} strUnit={'g'} strNameOfCount={"Proteines"}/>    
-      <SideBarCard pathIcon={GlucidesIcon} iCount={keyData.carbohydrateCount} strUnit={'g'} strNameOfCount={"Glucides"}/>    
-      <SideBarCard pathIcon={LipidesIcon} iCount={keyData.lipidCount} strUnit={'g'} strNameOfCount={"Lipides"}/>    
+      <SideBarCard icon={CaloriesIcon} count={keyData?.calorieCount} unit={'kCal'} nameOfCount={"Calories"}/>
+      <SideBarCard icon={ProteinesIcon} count={keyData?.proteinCount} unit={'g'} nameOfCount={"Proteines"}/>    
+      <SideBarCard icon={GlucidesIcon} count={keyData?.carbohydrateCount} unit={'g'} nameOfCount={"Glucides"}/>    
+      <SideBarCard icon={LipidesIcon} count={keyData?.lipidCount} unit={'g'} nameOfCount={"Lipides"}/>    
     </div>
   );
 }
