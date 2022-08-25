@@ -4,7 +4,24 @@
 *This guide is intended for people who are used to using a terminal.*
 
 #### Prerequisite :
-- node-js
+- node-js: v16.13 or higher
+
+####Dependencies
+- clean-jsdoc-theme: V4.1.2
+- jsdoc: V3.6.10
+- @testing-library/jest-dom: V5.16.4,
+- @testing-library/react: V13.3.0,
+- @testing-library/user-event: V13.5.0,
+- axios: V0.27.2,
+- http-proxy-middleware: V2.0.6,
+- prop-types: V15.8.1,
+- react: V18.2.0,
+- react-dom: V18.2.0,
+- react-router-dom: V6.3.0,
+- react-scripts: V5.0.1,
+- recharts: V2.1.12,
+- sass: V1.54.5,
+- web-vitals: V2.1.4
 
 #### 1. Install SportSee project app on your computer :
 
