@@ -2,7 +2,7 @@
   "name": "newproject",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost:3000/sportSee/home ",
+  "homepage": "http://localhost:3000/sportSee/home/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -15,6 +15,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
     "recharts": "^2.1.12",
+    "sass": "^1.54.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,7 +44,6 @@
   "devDependencies": {
     "clean-jsdoc-theme": "^4.1.2",
     "gh-pages": "^4.0.0",
-    "jsdoc": "^3.6.10",
-    "node-sass": "^7.0.1"
+    "jsdoc": "^3.6.10"
   }
 }
