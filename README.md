@@ -14,8 +14,7 @@ To install this project on your local machine, please follow these steps:
 2. In terminal, make sure you are on the right directory ```P12_Mantione_Alexandre/Application```.
 3. Install all dependencies of this project, please enter this following command : ```$npm install```.
 4. Repeat steps 2 and 3 with the following path ```P12_Mantione_Alexandre/back-end```
-5. Now you can run script: ```$react-scripts start``` to launch live server and you can navigate on the app.
-6. Launch back-end first, and after you can do same for application folder and confirm(for application folder) with "y" to change localhost port
+5. Launch back-end first, and after you can do same for application folder and confirm(for application folder) with "y" to change localhost port
     > You should be redirect to http://localhost:3001 if not copy/paste it in url web browser or make sure terminal not return an error.
 
 #### 2. Bug Tracker :
