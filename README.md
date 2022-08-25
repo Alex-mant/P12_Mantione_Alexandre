@@ -6,7 +6,7 @@
 #### Prerequisite :
 - node-js: v16.13 or higher
 
-#### Dependencies
+#### Dependencies :
 - clean-jsdoc-theme: V4.1.2
 - jsdoc: V3.6.10
 - @testing-library/jest-dom: V5.16.4,
